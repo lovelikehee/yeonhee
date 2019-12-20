@@ -1,0 +1,13 @@
+[
+	{
+		"name": "hee-dev",
+		"host": "https://lovelikehee.github.io/yeonhee/",
+		"port": 21,
+		"type": "ftp",
+		"username": "lovelikehee",
+		"password": "1haofur3",
+		"path": "/yeonhee",
+		"autosave": true,
+		"confirm": true
+	}
+]
