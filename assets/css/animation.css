@@ -78,3 +78,15 @@
 	0% {transform:translateX(0);}
 	100% {transform:translateX(-50%);}
 }
+
+
+@-webkit-keyframes bar {
+    from{-webkit-transform: scaleX(0); background:hsl(200, 100%, 50%);}
+    to {-webkit-transform: scaleX(1);  background:hsl(920, 100%, 50%);}
+}
+
+@keyframes bar {
+    from{transform: scaleX(0); background:hsl(200, 100%, 50%);}
+    to {transform: scaleX(1);  background:hsl(920, 100%, 50%);}
+}
+

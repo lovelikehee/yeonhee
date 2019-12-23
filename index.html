@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="is-loading" data-page="home">
 
 <head>
     <meta charset="UTF-8">
@@ -17,9 +17,11 @@
     <meta property="og:image" content="https://szlovelygirl.blog.me/me.jpg">
     <meta property="og:url" content="https://szlovelygirl.blog.me">
     <meta property="og:description" content="패럴럭스를 활용한 반응형 포트폴리오입니다." />
+    <!-- Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
     <title> 연희포트폴리오 || Yeonhee Portfolio</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/animation.css">≠
+    <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]> 
@@ -28,8 +30,9 @@
             alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
         </script>
     <![endif]-->
+    
 </head>
-adsfasdfadfsfdasadfvadsfadsfasdfads
+
 <body>
     <!-- loading -->
     <!-- <div class="progress progress-complete" id="progress" style="top: -100%;">
@@ -63,15 +66,17 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
         <!--//END full-video-->
         <!--START main-->
         <main>
-            <section class="sec1">
+            <!--START sec1-->
+            <section  class="sec1">
                 <div class="bar"></div>
                 <div class="row">
-                    <div class="desc cleartable">
+                    <div class="desc clearfix">
                         <h2 class="title">A creative partner for ambitious brands & independent creators</h2>
                     </div>
                 </div>
             </section>
             <!--//END sec1-->
+            <!--START sec2-->
             <section class="sec2">
                 <div class="moving">
                     <div class="marquee clearfix">
@@ -100,18 +105,28 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
                 </nav>
             </section>
             <!--//END sec2-->
+            <!--START sec3-->
             <section class="sec3">
-                <div class ="secTop" data-0="display:none;">
-                    <div class="row">
-                        <article></article>
-                        <article></article>
-                        <article></article>
-                        <article></article>
-                    </div>
+                <div class="row clearfix" data-0="display:none;" data-4000="display:block;  left:400vw;">
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
                 </div>
             </section>
             <!--//END sec3-->
-            <section class="sec4 cont"></section>
+            <!--START sec4-->
+            <section class="sec4 c-section -light -mask" data-scroll-section>
+                <div class="c-hugeNumbers" data-module-number>
+                    <div class="c-hugeNumbers_wrap">
+                        <div class="c-hugeNumbers_main" data-numbers="wrap">
+                            <div class="c-hugeNumbers_half -top"><span class="c-hugeNumbers_character">4</span><span class="c-hugeNumbers_character">5</span><span class="c-hugeNumbers_character">5</span></div>
+                            <div class="c-hugeNumbers_half"><span class="c-hugeNumbers_character">4</span><span
+class="c-hugeNumbers_character">5</span><span class="c-hugeNumbers_character">5</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!--//END sec4-->
         </main>
         <!--//END main-->
@@ -120,6 +135,11 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
         <!--//END footer-->
     </div>
     <!-- //END contentArea  -->
+    <div class="c-cursor" data-module-cursor>
+        <svg role="img">
+            <use xlink:href="assets/images/sprite.svg#cursor"></use>
+        </svg>
+    </div>
     <img id="pattern" src="assets/images/pattern.png" alt="pattern">
     <!-- <div class="modal-video-custom modal-close-video cursor-close">
         <div class="modal-video-custom-close-btn close-btn"></div><video class="cursor-close" loop="" autoplay=""
@@ -130,20 +150,26 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
     </div> -->
 
     <!--script -->
+    <script nomodule="" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"
+        crossorigin="anonymous" type="text/javascript"></script>
+    <script nomodule=""
+        src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CCustomEvent%2CElement.prototype.matches%2CNodeList.prototype.forEach%2CAbortController"
+        crossorigin="anonymous" type="text/javascript"></script>
     <script src="assets/js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/html5shiv.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <script>
-        var $visual = $(".full-video"),
-               $main = $("main"),
-               $sec = $main.find("section"),
-               $secTop = $sec.find(".secTop"),
-                noise = $(".noise-container"),
-                 noiseLogo = $(".noise-logo");
-
-
-        //skroll 
+    var $visual = $(".full-video"),
+            $main = $("main"),
+            $sec = $main.find("section"),
+            $secTop = $sec.find(".secTop"),
+            noise = $(".noise-container"),
+            noiseLogo = $(".noise-logo");
+     
+            //skroll 
         skrollr.init();
 
         $(window).scroll(function () {
@@ -167,14 +193,13 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
 
 
 
-        var R_H =  $sec.eq(2).offset().top;
-        var r_h =   Math.round(R_H);
+        // var R_H =  $sec.eq(2).offset().top;
+        // var r_h =   Math.round(R_H);
 
-        $sec.eq(2).find($secTop).attr('data-'+ r_h,'display:block');
+        // $sec.eq(2).find($secTop).attr('data-'+ r_h,'display:block');
 
 
         //visual
-
         noise.mouseenter(function (e) {
             e.preventDefault();
             noise.removeClass("no-mask");
@@ -189,9 +214,7 @@ adsfasdfadfsfdasadfvadsfadsfasdfads
 
 
         // .moving text
-
         marqueeCharW();
-
         $(window).resize(function () {
             marqueeCharW();
         });
