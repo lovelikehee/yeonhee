@@ -77,6 +77,7 @@
  @keyframes marquee {
 	0% {transform:translateX(0);}
 	100% {transform:translateX(-50%);}
+<<<<<<< HEAD
 }
 
 
@@ -90,3 +91,6 @@
     to {transform: scaleX(1);  background:hsl(920, 100%, 50%);}
 }
 
+=======
+}
+>>>>>>> b00b5015bb9fa572b61a274b8a211011e44eb184
