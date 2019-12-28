@@ -1,3 +1,23 @@
+
+@-webkit-keyframes noise {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  @keyframes noise {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+
 @-webkit-keyframes noiseAnimation {
     0% {
        -webkit-transform: translate(0);
@@ -77,20 +97,25 @@
  @keyframes marquee {
 	0% {transform:translateX(0);}
 	100% {transform:translateX(-50%);}
-<<<<<<< HEAD
+
 }
 
+@-webkit-keyframes infiniteText {
+    0% {
+        transform: translate3d(100%,0,0)
+    }
 
-@-webkit-keyframes bar {
-    from{-webkit-transform: scaleX(0); background:hsl(200, 100%, 50%);}
-    to {-webkit-transform: scaleX(1);  background:hsl(920, 100%, 50%);}
+    to {
+        transform: translate3d(-100%,0,0)
+    }
 }
 
-@keyframes bar {
-    from{transform: scaleX(0); background:hsl(200, 100%, 50%);}
-    to {transform: scaleX(1);  background:hsl(920, 100%, 50%);}
-}
+@keyframes infiniteText {
+    0% {
+        transform: translate3d(100%,0,0)
+    }
 
-=======
+    to {
+        transform: translate3d(-100%,0,0)
+    }
 }
->>>>>>> b00b5015bb9fa572b61a274b8a211011e44eb184

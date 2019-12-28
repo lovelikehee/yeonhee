@@ -6,7 +6,7 @@ body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,tabl
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;vertical-align:baseline;background:transparent;}
 
 
-body {color:#212121; background-color:#fff; line-height:1; text-rendering:auto; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; -moz-osx-font-smoothing:grayscale; cursor:default; }
+body {color:#212121; background-color:#fff; line-height:1; text-rendering:auto; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; -moz-osx-font-smoothing:grayscale; }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
 ::selection { background: hsla(0,0%,100%,.998); color: #000;}
 
