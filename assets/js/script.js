@@ -1,24 +1,24 @@
 $(function () {
 
-   var  $main = $("main"),
+   var  Area = $("#contentsArea"),
+           $main = Area.find("main"),
             $sec = $main.find("section"),
             $secTop = $sec.find(".secTop"),
-            noise = $(".noise-container"),
-            noiseLogo = $(".noise-logo");
+                noise = $(".noise-container"),
+                noiseLogo = $(".noise-logo");
 
     //skroll 
     skrollr.init();
-    $sec.eq(2).hide();
 
     $(window).scroll(function () {
         var wScroll = parseInt($(this).scrollTop());
         $(".scroll_top").text(wScroll);
 
-        if (wScroll >= $sec.eq(0).offset().top) {
-            $sec.eq(0).addClass("show");
+        if (wScroll >= $(".sec1").offset().top) {
+            $(".sec1").addClass("show");
             $(".bar").addClass("fix-bar");
         } else {
-            $sec.eq(0).removeClass("show");
+            $(".sec1").removeClass("show");
             $(".bar").removeClass("fix-bar");
         }
         if (wScroll >= $sec.eq(1).offset().top) {
@@ -26,10 +26,10 @@ $(function () {
         } else {
             $sec.eq(1).removeClass("show");
         }
-        if (wScroll >= $sec.eq(2).offset().top) {
-                $sec.eq(2).fadeIn();
+        if(wScroll >= $sec.eq(0).offset().top) {
+            $sec.eq(0).removeClass('active');
         } else {
-        
+            $sec.eq(0).addClass('active');
         }
 
      });

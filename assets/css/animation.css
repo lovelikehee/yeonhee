@@ -1,4 +1,44 @@
 
+@-webkit-keyframes rotate_360 {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+              transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+              transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+  
+  @keyframes rotate_360 {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+              transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+              transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+  
+@-webkit-keyframes cursor_ring {
+    0% {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  @keyframes cursor_ring {
+    0% {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
 @-webkit-keyframes noise {
     0% {
       background-position: 0 0;
