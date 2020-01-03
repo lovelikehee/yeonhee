@@ -2,10 +2,11 @@ $(function () {
 
    var  Area = $("#contentsArea"),
            $main = Area.find("main"),
+           $nav = Area.find("nav"),
             $sec = $main.find("section"),
             $secTop = $sec.find(".secTop"),
-                noise = $(".noise-container"),
-                noiseLogo = $(".noise-logo");
+            noise = $(".noise-container"),
+            noiseLogo = $(".noise-logo");
 
     //skroll 
     skrollr.init();
@@ -26,12 +27,11 @@ $(function () {
         } else {
             $sec.eq(1).removeClass("show");
         }
-        if(wScroll >= $sec.eq(0).offset().top) {
-            $sec.eq(0).removeClass('active');
+        if(wScroll >= $(".sec3").offset().top) {
+            $(".sec3").addClass('active');
         } else {
-            $sec.eq(0).addClass('active');
+            $(".sec3").removeClass('active');
         }
-
      });
 
 
@@ -64,17 +64,16 @@ $(function () {
 
     function marqueeCharW() {
         var $marquee = $(".marquee").find("span");
-        
         $marquee.css({
             'width': 'auto',
             'height': 'auto'
         });
         var CHAR_W = $marquee.eq(0).width();
         var CHAR_H = $marquee.eq(0).height();
-        $main.find(".sec2 .moving").css('width', CHAR_W + 'px');
-        $main.find(".sec2 .moving").css('height', CHAR_H + 'px');
-        $main.find(".sec2 .marquee").css('width', CHAR_W * 2 + 'px');
-        $main.find(".sec2 .marquee").css('height', CHAR_H + '%');
+        $nav.find(".sec2 .moving").css('width', CHAR_W + 'px');
+        $nav.find(".sec2 .moving").css('height', CHAR_H + 'px');
+        $nav.find(".sec2 .marquee").css('width', CHAR_W * 2 + 'px');
+        $nav.find(".sec2 .marquee").css('height', CHAR_H + '%');
 
     }
 
