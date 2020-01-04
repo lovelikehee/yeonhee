@@ -29,10 +29,20 @@ $(function () {
         }
         if(wScroll >= $(".sec3").offset().top) {
             $(".sec3").addClass('active');
+            $(".sec3").removeClass('no-js');
         } else {
             $(".sec3").removeClass('active');
+            $(".sec3").addClass('no-js');
         }
      });
+
+
+     //cursor 
+
+    $("")
+
+
+
 
 
     // var R_H =  $sec.eq(2).offset().top;

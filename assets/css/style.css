@@ -399,6 +399,41 @@ footer{position:fixed; width:100%;}
 .reveal span { display: inline-block;white-space: pre;}
 .noselect { -webkit-user-select: none;  -moz-user-select: none; -ms-user-select: none;user-select: none;}
 
+.no-js {
+  overflow-x: auto;
+}
+
+.no-js .screen-loader {
+  display: none;
+}
+
+.no-js #page {
+  position: static;
+}
+
+.no-js .header .navigation {
+  display: none;
+}
+
+.no-js .section__nav {
+  display: none;
+}
+
+.no-js .section--front .title span:not(:last-child) {
+  margin-top: 0;
+}
+
+.no-js .section--quote .quote__text span {
+  margin-top: 0;
+}
+
+.no-js .section--quote .statue__img > img {
+  display: none;
+}
+
+.no-js .page-bg{
+  display: none;
+}
 
 
 /* .sec4 .Numbers */
