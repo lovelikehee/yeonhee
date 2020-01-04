@@ -265,10 +265,7 @@ input:checked[type=checkbox] {
     }
   }
   
-  @media screen and (max-width: 992px) {
-    #cursor { visibility: hidden;}
-  }
-
+ 
   .link {
     margin-top: -15px;
     margin-bottom: -15px;
