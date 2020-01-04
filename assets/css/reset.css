@@ -77,20 +77,11 @@ input:checked[type=checkbox] {
 }
 
 /* #cursor */
-#cursor {position: fixed; left: 0; top: 0; -webkit-transform: translate(-100%, -100%);transform: translate(-100%, -100%);   pointer-events: none; z-index: 91; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(26, 26, 26, 0.5);
-    -webkit-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), -webkit-transform 0s;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), -webkit-transform 0s;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s, -webkit-transform 0s;
-  }
-  
-  #cursor.active {width: 60px; height: 60px;}
-  #cursor .cursor__text { position: absolute;left: 50%; top: 50%;  -webkit-transform: translate(-50%, -50%) rotate(45deg);transform: translate(-50%, -50%) rotate(45deg);opacity: 0; -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}
 
-  #cursor .cursor__text .char1 {
-    -webkit-transform: rotate(-68deg) translate(0, 0);
-            transform: rotate(-68deg) translate(0, 0);
-  }
+#cursor {position: fixed; left: -50px; top: -50px; -webkit-transform: translate(-100%, -100%);transform: translate(-100%, -100%);   pointer-events: none; z-index: 91; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(26, 26, 26, 0.5);  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s, -webkit-transform 0s;}
+#cursor.active {width: 60px; height: 60px;}
+#cursor .cursor__text { position: absolute;left: 50%; top: 50%;  -webkit-transform: translate(-50%, -50%) rotate(45deg);transform: translate(-50%, -50%) rotate(45deg);opacity: 0; -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}
+#cursor .cursor__text .char1 { -webkit-transform: rotate(-68deg) translate(0, 0); transform: rotate(-68deg) translate(0, 0);}
   
   #cursor .cursor__text .char2 {
     -webkit-transform: rotate(-56deg) translate(0, 0);
