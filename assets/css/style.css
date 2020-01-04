@@ -555,6 +555,7 @@ footer{position:fixed; width:100%;}
     font-size: calc(30px + 25*(100vw - 320px)/1120);
 
 }
+<<<<<<< HEAD
 }
 
 @media only screen and (min-width: 640px) and (max-width:767px) {
@@ -570,3 +571,5 @@ footer{position:fixed; width:100%;}
       width: 450px
   }
 }
+=======
+>>>>>>> ca3ff32b4a85ac711d513e4ba413c173f22a37a0
