@@ -11,10 +11,16 @@ $(function () {
     //skroll 
     skrollr.init();
 
+
     $(window).scroll(function () {
         var wScroll = parseInt($(this).scrollTop());
         $(".scroll_top").text(wScroll);
 
+        if (wScroll >= $nav.offset().top) {
+            $nav .addClass("show");    
+        } else {
+            $nav.removeClass("show");  
+        }
         if (wScroll >= $(".sec1").offset().top) {
             $(".sec1").addClass("show");
             $(".bar").addClass("fix-bar");
@@ -38,10 +44,10 @@ $(function () {
 
 
      //cursor 
-
-    $("")
-
-
+     $nav.mouseenter(function(){
+        $(".custom-cursor__text ").find("span").hide();
+     });
+ 
 
 
 
@@ -56,12 +62,14 @@ $(function () {
         e.preventDefault();
         noise.removeClass("no-mask");
         noiseLogo.removeClass("showee");
+        $(".custom-cursor__text ").find("span").show();
     });
 
     noiseLogo.mouseenter(function (e) {
         e.preventDefault();
         noise.addClass("no-mask");
         noiseLogo.addClass("showee");
+        $(".custom-cursor__text ").find("span").hide();
     });
 
 
