@@ -13,13 +13,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
 ::selection { background: hsla(0,0%,100%,.998); color: #000;}
 
 /* a 링크 초기화 */
-a {color:#212121; border:0; margin:0; padding:0; vertical-align:baseline; background:transparent; text-decoration:none; cursor:pointer;}
+a {color:#212121; border:0; margin:0; padding:0; vertical-align:baseline; background:transparent; text-decoration:none; cursor:none;}
 
 /* button 초기화 */
-button {padding: 0; background: none; border: none;font: inherit;text-transform: inherit;line-height: inherit;text-align: inherit;cursor: pointer;}
+button {padding: 0; background: none; border: none;font: inherit;text-transform: inherit;line-height: inherit;text-align: inherit;cursor: none;}
 
 /* 폰트 초기화 */
-body, input, textarea, select, button, table ,p,span {font-family: 'Roboto', sans-serif; color: #222;}
+body, input, textarea, select, button, table ,p {font-family: 'Roboto', sans-serif; color: #222;}
 
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}
@@ -40,7 +40,7 @@ table{border-collapse:collapse;border-spacing:0;}
 video,img {max-width: 100%;}
 
 /* clearfix */
-.clearfix{*zoom:1;} /*익스플로어7을 위해서*/
+.clearfix::after {content:''; clear:both; display:block; }
 
 
 /* IR 효과 */
@@ -78,7 +78,7 @@ input:checked[type=checkbox] {
 
 /* #cursor */
 
-#cursor {position: fixed; left: -50px; top: -50px; -webkit-transform: translate(-100%, -100%);transform: translate(-100%, -100%);   pointer-events: none; z-index: 91; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(26, 26, 26, 0.5);  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s, -webkit-transform 0s;}
+#cursor {position: fixed; left: -50px; top: -50px; -webkit-transform: translate(-100%, -100%);transform: translate(-100%, -100%);   pointer-events: none; z-index: 91; width: 8px; height: 8px; border-radius: 50%; background: hsla(0,0%,100%,.2);border: 1px solid rgba(26, 26, 26, 0.5);  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s, -webkit-transform 0s;}
 #cursor.active {width: 60px; height: 60px;}
 #cursor .cursor__text { position: absolute;left: 50%; top: 50%;  -webkit-transform: translate(-50%, -50%) rotate(45deg);transform: translate(-50%, -50%) rotate(45deg);opacity: 0; -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}
 #cursor .cursor__text .char1 { -webkit-transform: rotate(-68deg) translate(0, 0); transform: rotate(-68deg) translate(0, 0);}
@@ -240,19 +240,19 @@ input:checked[type=checkbox] {
   
   @-webkit-keyframes cursor_ring {
     0% {
-      background: rgba(255, 255, 255, 0.4);
+      background: hsla(0,0%,100%,.2);
     }
     100% {
-      background: rgba(255, 255, 255, 0.2);
+      background: hsla(0,0%,100%,.2);
     }
   }
   
   @keyframes cursor_ring {
     0% {
-      background: rgba(255, 255, 255, 0.4);
+      background:hsla(0,0%,100%,.2);
     }
     100% {
-      background: rgba(255, 255, 255, 0.2);
+      background: hsla(0,0%,100%,.2);
     }
   }
   

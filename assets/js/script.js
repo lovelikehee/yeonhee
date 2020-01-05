@@ -30,15 +30,14 @@ $(function () {
         }
         if (wScroll >= $sec.eq(1).offset().top) {
             $(".bar").removeClass("fix-bar");
+            $(".custom-cursor__text ").find("span").hide();
         } else {
             $sec.eq(1).removeClass("show");
         }
         if(wScroll >= $(".sec3").offset().top) {
-            $(".sec3").addClass('active');
-            $(".sec3").removeClass('no-js');
+            $(".sec3").addClass('show');
         } else {
-            $(".sec3").removeClass('active');
-            $(".sec3").addClass('no-js');
+            $(".sec3").removeClass('show');
         }
      });
 
@@ -91,7 +90,7 @@ $(function () {
         $nav.find(".sec2 .moving").css('width', CHAR_W + 'px');
         $nav.find(".sec2 .moving").css('height', CHAR_H + 'px');
         $nav.find(".sec2 .marquee").css('width', CHAR_W * 2 + 'px');
-        $nav.find(".sec2 .marquee").css('height', CHAR_H + '%');
+        $nav.find(".sec2 .marquee").css('height', CHAR_H + 'px');
 
     }
 
