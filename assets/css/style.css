@@ -338,5 +338,5 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #000; z-i
   .nav .menu .title a , .sec2 .marquee span { font-size:50px; }
   .noise-container   {-webkit-mask-position: calc(50% + 5px) 50% ; mask-position: calc(50% + 5px) 50%; -webkit-mask-size: 250px 50px;mask-size: 250px 50px;}
   .noise-logo {left: calc(50% + 5px); width: 250px;}
- body {touch-action: none important!;}
+  .sec3 {position:fixed; top:0;}
 }
