@@ -21,7 +21,7 @@ nav{position:relative; background:#000; z-index: 5;}
 main { position:relative; background:#000; z-index: 5;}
 .sec1  { min-height:100vh;  margin-bottom: -10vh;}
 .sec2 {overflow:hidden; }
-.sec3 {visibility:hidden; border:1px solid #F4F4F4}
+.sec3 {visibility:hidden; position:relative; border:1px solid #F4F4F4}
 .sec4 {height:100vh; background-color:#F4F4F4;}
 .sec5 {background-color: #000;} 
 footer{position:fixed; left:0; bottom:0; width:100%; background-color: #000; z-index: 4; }
@@ -105,7 +105,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #000; z-i
 .sec3 #rendered {position: absolute; left: 0;top: -5%; width:100%; overflow: hidden; pointer-events: none;}
 .sec3 #canvas {width: 100vw; height: 110vh; opacity: 1;  -webkit-transition: opacity 0.5s ease-in; transition: opacity 0.5s ease-in;}
 /* .sec3 #page */
-.sec3 #page {position: fixed; top:0; left: 0; -webkit-transform: translate(0, 0);transform: translate(0, 0); display: -webkit-box;display: -ms-flexbox;display: flex;width: 500vw;height: 100%;}
+.sec3 #page {position: static; top:0; left: 0; -webkit-transform: translate(0, 0);transform: translate(0, 0); display: -webkit-box;display: -ms-flexbox;display: flex;width: 500vw;height: 100%;}
 .sec3 #page::after { content: '';position: absolute;left: 0; top: -5%; z-index: -1;width: 100%;height: 110%; background: url(../images/noise1.png) repeat;-webkit-animation: noise 0.5s steps(8) infinite;animation: noise 0.5s steps(8) infinite;opacity: .85;}
 .sec3 #page .section { position: relative;display: -webkit-box; display: -ms-flexbox; display: flex; padding: 60px 100px;width: 100vw;}
 .sec3 #page .section--front .title-wrap { -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
