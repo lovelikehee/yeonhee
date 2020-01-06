@@ -237,24 +237,7 @@ input:checked[type=checkbox] {
     -webkit-animation: cursor_ring .4s;
             animation: cursor_ring .4s;
   }
-  
-  @-webkit-keyframes cursor_ring {
-    0% {
-      background: hsla(0,0%,100%,.2);
-    }
-    100% {
-      background: hsla(0,0%,100%,.2);
-    }
-  }
-  
-  @keyframes cursor_ring {
-    0% {
-      background:hsla(0,0%,100%,.2);
-    }
-    100% {
-      background: hsla(0,0%,100%,.2);
-    }
-  }
+
   
  
   .link {
