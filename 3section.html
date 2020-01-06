@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine-->
+  <meta name="description" content="패럴럭스를 활용한 반응형 포트폴리오입니다.">
+  <meta name="keywords" content="퍼블리셔, 포토폴리오, 퍼블리쉬 , portfolio, Publisher, font-end, unique, webdesign ">
+  <!-- Schema.org-->
+  <meta itemprop="name" content="연희포트폴리오 || Yeonhee Portfolio">
+  <meta itemprop="description" content="패럴럭스를 활용한 반응형 포트폴리오입니다.">
+  <!-- Open Graph general-->
+  <meta property="og:title" content="연희포트폴리오">
+  <meta property="og:type" content="portfolio">
+  <meta property="og:image" content="https://szlovelygirl.blog.me/me.jpg">
+  <meta property="og:url" content="https://szlovelygirl.blog.me">
+  <meta property="og:description" content="패럴럭스를 활용한 반응형 포트폴리오입니다." />
+  
+  <!-- Favicon-->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
+  <title> 연희포트폴리오 || Yeonhee Portfolio</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
+  <link rel="stylesheet" href="assets/css/style1.css"> 
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script type="text/javascript">
+            alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+        </script>
+    <![endif]-->
+</head>
+<body class="no-js">
+    <div class="screen-loader">
+        <div class="screen-loader__text">Hee Portfolio On</div>
+        <div class="progress">
+          <div class="progress__present"></div>
+          <div class="progress__holder"></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          document.body.classList.remove('no-js');
+          var perfData = window.performance.timing,
+            EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+            loadingTime = parseInt((EstimatedTime / 1000) % 60) * 100;
+          var progressBar = document.getElementsByClassName('progress__present')[0];
+          progressBar.style.transition = 'width ' + loadingTime + 'ms cubic-bezier(0.215, 0.61, 0.355, 1)';
+          progressBar.style.width = progressBar.parentElement.offsetWidth * 0.9 + 'px';
+        })();
+    
+      </script>
+         <!--START sec3-->
+         <section class="sec3">
+            <div class="wrap"data-0="transform:translate(0,0);"  >
+              <div class="header">
+                <div class="logo clickable" data-direction="0">Myles Ng.</div>
+                <div class="navigation">
+                  <div class="scrollbar">
+                    <div class="clickable virgin" id="scrollbar__thumb"><span class="text--small">Grab me</span></div>
+                  </div>
+                </div>
+              </div>        
+              <div id="rendered">
+                <div id="canvas"></div>
+              </div>
+              <div id="cursor"><span class="cursor__text">View on Site</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+                  <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="32" cy="32" r="29.5"></circle>
+                </svg>
+              </div>
+              <div id="page">
+                <div class="section section--front current" data-label="Pilot">
+                  <div class="col reserved-space"></div>
+                  <div class="col title-wrap">
+                    <h2 class="col__item title text--giant text--bold">
+                        <span class="title__text plane">Web /</span>
+                        <span class="title__text plane">Interaction</span>
+                        <span class="title__text plane">Designer</span>
+                        <span class="text--small plane">With little sense of humor</span></h2>
+                  </div>
+                  <div class="col cta-wrap">
+                    <div class="col__item copyright">
+                      <span class="text--large">
+                       <span class="copyright__text plane vert eleft">©2020</span></span>
+                    </div>
+                    <div class="col__item cta">
+                      <div class="cta__text-wrap"><span class="text--big">Let’s talk about<br>your Big stuff</span><span
+                          class="text--regular">& My future</span></div><a class="link"
+                        href="mailto:m@mylesnguyen.com">m@mylesnguyen.com</a>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--right noselect clickable"><span
+                      class="text--giant text--bold"><span>&nbsp;&nbsp;&nbsp;Recent</span><br><span>&nbsp;&nbsp;&nbsp;Work</span></span></button>
+                </div>
+                <div class="section section--work" data-label="Work 01">
+                  <div class="col project-wrap">
+                    <div class="col__item project">
+                      <div class="project__count"><span class="project__count-current reveal">01</span><span
+                          class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
+                        target="_blank" href="http://lovelikehee.dothome.co.kr/index.html">
+                        <div class="project__image-container plane plane--media"><img
+                            data-src="assets/images/work01.jpg" alt="responsive cover" />
+                          <video data-src="assets/video/megabox.mp4"></video>
+                          <noscript><img src="assets/images/work01.jpg" alt="responsive cover" />
+                            <video src="assets/video/megabox.mp4" muted="muted" autoplay="autoplay"loop="loop" preload="preload"></video>
+                          </noscript>
+                        </div>
+                      </a>
+                      <div class="project__meta">
+                        <h3 class="project__meta-title plane">Mega Box</h3>
+                        <div class="project__meta-tags">
+                          <div class="reveal"><span>Webstandard</span><span>Responsive</span><span>Javascript</span>
+                          </div>
+                          <div class="reveal"><span>Publishing</span><span>Development</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--left noselect clickable"><span
+                      class="text--giant text--bold"><span>Back</span></span></button>
+                  <button class="section__nav section__nav--right noselect clickable"><span
+                      class="text--giant text--bold"><span>Next</span></span></button>
+                </div>
+                <div class="section section--work" data-label="Work 02">
+                  <div class="col project-wrap">
+                    <div class="col__item project">
+                      <div class="project__count"><span class="project__count-current reveal">02</span><span
+                          class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
+                        target="_blank" href="http://yeonheee.dothome.co.kr/cjw/index.html">
+                        <div class="project__image-container plane plane--media"><img
+                            data-src="assets/images/work02.jpg" alt="Whalen Financial Planning project cover" />
+                          <video data-src="assets/video/cjw.mp4"></video>
+                          <noscript><img src="assets/images/work02.jpg"
+                              alt="Whalen Financial Planning project cover" />
+                            <video src="assets/video/cjw.mp4" muted="muted" autoplay="autoplay" loop="loop"
+                              preload="preload"></video>
+                          </noscript>
+                        </div>
+                      </a>
+                      <div class="project__meta">
+                        <h3 class="project__meta-title plane">Chungjungone</h3>
+                        <div class="project__meta-tags">
+                          <div class="reveal"><span>mobile</span><span>HTML5/CSS3</span><span>javascript</span>
+                          </div>
+                          <div class="reveal"><span>Publishing</span><span>Development</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--left noselect clickable"><span
+                      class="text--giant text--bold"><span>Back</span></span></button>
+                  <button class="section__nav section__nav--right noselect clickable"><span
+                      class="text--giant text--bold"><span>Next</span></span></button>
+                </div>
+                <div class="section section--work" data-label="Work 03">
+                  <div class="col project-wrap">
+                    <div class="col__item project">
+                      <div class="project__count"><span class="project__count-current reveal">03</span><span
+                          class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
+                        target="_blank" href="https://www.behance.net/gallery/84896693/Gym-Watch-Concept">
+                        <div class="project__image-container plane plane--media"><img
+                            data-src="assets/images/work03.jpg" alt="Gym Watch project cover" />
+                          <video data-src="assets/video/samsung.mp4"></video>
+                          <noscript><img src="assets/images/work03.jpg" alt="Gym Watch project cover" />
+                            <video src="assets/video/samsung.mp4" muted="muted" autoplay="autoplay"
+                              loop="loop" preload="preload"></video>
+                          </noscript>
+                        </div>
+                      </a>
+                      <div class="project__meta">
+                        <h3 class="project__meta-title plane">SAMSUNG</h3>
+                        <div class="project__meta-tags">
+                          <div class="reveal"><span>webstandard</span><span>HTML5/CSS3</span><span>javascript</span>
+                          </div>
+                          <div class="reveal"><span>Publishing</span><span>Design</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--left noselect clickable"><span
+                      class="text--giant text--bold"><span>Back</span></span></button>
+                  <button class="section__nav section__nav--right noselect clickable"><span
+                      class="text--giant text--bold"><span>Next</span></span></button>
+                </div>
+                <div class="section section--quote" data-label="Brains">
+                  <div class="col">
+                    <div class="col__item quote-wrap">
+                      <div class="quote">
+                        <div class="intro-text text--regular"><span class="reveal">A biased quote </span><span
+                            class="reveal">To make me look smart</span><span class="reveal">— or like a moron</span></div>
+                        <div class="statue">
+                          <div class="statue__img"><img data-src="assets/images/statue.png"
+                              alt="David statue head" data-sampler="statueTexture">
+                            <noscript><img src="assets/images/statue.png"
+                                alt="David statue head"></noscript><img class="map"
+                              data-src="assets/images/statue_map.jpg" data-sampler="statueMapTexture">
+                          </div>
+                          <div id="canvas-statue"></div>
+                          <div class="statue__text-wrap text--small"><span class="statue__text">This trendy statue head is
+                              floating around here for absolutely no reason — </span></div>
+                        </div>
+                        <div class="quote__text"><span class="plane">Art</span><span class="plane">is like a</span><span
+                            class="plane">—fart.</span><span class="align-right plane">If you—</span>
+                          <div class="align-right">
+                            <div>—–</div>
+                            <div><span class="plane">force it,</span><span class="plane">It’s</span><span
+                                class="plane">probrably</span></div>
+                          </div><span class="align-right plane">crap.</span><span
+                            class="quote-mark quote-mark--open plane">“</span><span
+                            class="quote-mark quote-mark--close plane">”</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--left noselect clickable"><span
+                      class="text--giant text--bold"><span>Back</span></span></button>
+                  <button class="section__nav section__nav--right noselect clickable"><span
+                      class="text--giant text--bold"><span>Next</span></span></button>
+                </div>
+                <div class="section section--end" data-label="That's it">
+                  <div class="col cta-wrap">
+                    <div class="col__item cta">
+                      <div class="cta__title text--big">How convenient</div>
+                      <div class="cta__paragraph">One little call-to-action at the end to save you a scrolling trip and
+                        drastically increase my conversion rate by 13.47%</div>
+                      <div class="cta__reference">(According to I made that up)</div><a class="link"
+                        href="mailto:m@mylesnguyen.com">Say no more</a>
+                      <div class="cta__deco"> <span class="plane vert">tou</span><span class="plane vert">ché</span></div>
+                    </div>
+                  </div>
+                  <button class="section__nav section__nav--left noselect clickable"><span
+                      class="text--giant text--bold"><span>Back</span></span></button>
+                </div>
+              </div>
+              <div class="footer">
+                <div class="stalking">
+                  <div class="stalking__text"><span>Don't forget your right to stalk me</span></div>
+                  <div class="stalking__media"><a target="_blank" href="https://www.behance.net/mylesnguyen">Be
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+                        <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
+                      </svg></a><a target="_blank" href="https://twitter.com/MylesWay_">Bl
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+                        <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
+                      </svg></a><a target="_blank" href="http://linkedin.com/in/mylesnguyen">In
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
+                        <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
+                      </svg></a></div>
+                </div>
+                <div class="contact"></div>
+              </div>
+              <div class="page-bg plane"></div>
+              <img id="pattern" src="assets/images/pattern.png">
+          </div>
+          </section>
+          <!--//END sec3--> 
+          <footer>
+            <!--script -->
+          <script src="assets/js/jquery.min_1.12.4.js"></script>
+          <script src="assets/js/main.js"></script>
+          <script src="assets/js/script.js"></script>
+          <script src="assets/js/skrollr.min.js"></script>
+          <script src="assets/js/html5shiv.min.js"></script>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125996448-2"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+      
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-125996448-2');
+          </script>
+          
+        </footer>
+</body>
+</html>
