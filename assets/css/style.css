@@ -21,7 +21,7 @@ nav{position:relative; background:#000; z-index: 5;}
 main { position:relative; background:#000; z-index: 5;}
 .sec1  { min-height:100vh;  margin-bottom: -10vh;}
 .sec2 {overflow:hidden; }
-.sec3 { border:1px solid #F4F4F4}
+.sec3 { position:fixed; top:0; left:0 ;border:1px solid #F4F4F4}
 .sec4 {height:100vh; background-color:#F4F4F4;}
 .sec5 {background-color: #000;} 
 footer{position:fixed; left:0; bottom:0; width:100%; background-color: #000; z-index: 4; }
