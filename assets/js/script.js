@@ -1,12 +1,12 @@
 $(function () {
 
-   var  Area = $("#contentsArea"),
-           $main = Area.find("main"),
-           $nav = Area.find("nav"),
-            $sec = $main.find("section"),
-            $secTop = $sec.find(".secTop"),
-            noise = $(".noise-container"),
-            noiseLogo = $(".noise-logo");
+    var Area = $("#contentsArea"),
+        $main = Area.find("main"),
+        $nav = Area.find("nav"),
+        $sec = $main.find("section"),
+        $secTop = $sec.find(".secTop"),
+        noise = $(".noise-container"),
+        noiseLogo = $(".noise-logo");
 
     //skroll 
     skrollr.init();
@@ -17,9 +17,9 @@ $(function () {
         $(".scroll_top").text(wScroll);
 
         if (wScroll >= $nav.offset().top) {
-            $nav .addClass("show");    
+            $nav.addClass("show");
         } else {
-            $nav.removeClass("show");  
+            $nav.removeClass("show");
         }
         if (wScroll >= $(".sec1").offset().top) {
             $(".sec1").addClass("show");
@@ -34,19 +34,30 @@ $(function () {
         } else {
             $sec.eq(1).removeClass("show");
         }
-        if(wScroll >= $(".sec3").offset().top) {
-            $(".sec3").addClass('show');
+        if (wScroll >= $(".sec4").offset().top) {
+            $(".sec-end").addClass('show');
         } else {
-            $(".sec3").removeClass('show');
+            $(".sec-end").removeClass('show');
         }
-     });
+    });
 
 
-     //cursor 
-     $nav.mouseenter(function(){
+
+        $('.section__up').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 200);
+        });
+
+
+
+
+    //cursor 
+    $nav.mouseenter(function () {
         $(".custom-cursor__text ").find("span").hide();
-     });
- 
+    });
+
 
 
 
@@ -96,8 +107,6 @@ $(function () {
 
 
 
-       
+
 
 });
-
-
