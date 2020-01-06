@@ -3105,7 +3105,7 @@
         document.querySelector(".header .logo").addEventListener("click", b, !1)
     }! function () {
         var t = document.getElementById("page");
-        if (t.style.width = 100 * t.childElementCount + "vw", window.matchMedia("(max-width : 480px)").matches)
+        if (t.style.width = 100 * t.childElementCount + "vw", window.matchMedia("(max-width : 280px)").matches)
             for (var e = document.querySelectorAll(".project__meta-title"), n = 0; n < e.length; n++) e[n].classList.remove("plane");
         for (var i, r = document.getElementsByClassName("section__nav"), o = (n = 0, r.length); n < o; n++) r[n].dataset.direction = r[n].className.includes("right") ? 1 : -1, lt(r[n], {
             setClassName: function (t, e) {
