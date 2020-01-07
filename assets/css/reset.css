@@ -50,7 +50,7 @@ video,img {max-width: 100%;}
 .ir_so {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
 
 /* skroll  */
-.skrollable {position:fixed;z-index:100;}
+.skrollable {position:fixed; z-index:100;}
 .skrollr-mobile .skrollable {position:absolute;}
 .skrollable .skrollable {position:absolute;}
 .skrollable .skrollable .skrollable {position:static;}
