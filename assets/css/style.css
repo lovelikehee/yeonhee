@@ -101,7 +101,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 
 
 /* .sec-end   */
-.sec-end {visibility: hidden;   opacity:0; position: relative; bottom:0; left:0; width: 100%; height: 100vh; overflow:hidden; border:1px solid yellow; -webkit-transition: -webkit-opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.84); transition: -webkit-opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.84);}
+.sec-end {visibility: hidden;   opacity:0; position: fixed; bottom:0; left:0; width: 100%; height: 100vh; overflow:hidden; border:1px solid yellow; -webkit-transition: -webkit-opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.84); transition: -webkit-opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.84);}
 .sec-end.show {visibility: visible; opacity:1;}
 .sec-end .header #scrollbar__thumb:hover {cursor: -webkit-grab; cursor: grab;}
 .sec-end .dragging {  cursor: -webkit-grabbing; cursor: grabbing;}
