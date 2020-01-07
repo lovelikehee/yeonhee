@@ -46,7 +46,7 @@ $(function () {
             $(".sec4").hide();
         } else {
             $(".sec-end").removeClass('show');
-              $(".sec4").hide();
+              $(".sec4").show();
         }
     });
 
