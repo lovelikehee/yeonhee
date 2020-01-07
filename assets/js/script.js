@@ -9,17 +9,17 @@ $(function () {
         noiseLogo = $(".noise-logo");
 
     //skroll 
-    skrollr.init({
-        forceHeight: false,
-        mobileCheck: function(){
-                      if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-                          // mobile device
-                      }
-                  }
-              });
-      
-      Resources
 
+
+
+  skrollr.init({
+ 
+  mobileCheck: function(){
+                if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+                    // mobile device
+                }
+            }
+        });
 
     $(window).scroll(function () {
         var wScroll = parseInt($(this).scrollTop());
