@@ -23,10 +23,10 @@ $(function () {
         var wScroll = parseInt($(this).scrollTop());
         $(".scroll_top").text(wScroll);
 
-        if (wScroll >= $nav.offset().top) {
-            $nav.addClass("show");
+        if (wScroll >= $(".sec2").offset().top) {
+            $(".sec2").addClass("show");
         } else {
-            $nav.removeClass("show");
+            $(".sec2").removeClass("show");
         }
         if (wScroll >= $(".sec1").offset().top) {
             $(".sec1").addClass("show");
@@ -43,10 +43,8 @@ $(function () {
         }
         if (wScroll >= $(".sec4").offset().top) {
             $(".sec-end").addClass('show');
-            $(".sec4").hide();
         } else {
             $(".sec-end").removeClass('show');
-              $(".sec4").show();
         }
     });
 

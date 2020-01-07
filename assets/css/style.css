@@ -83,9 +83,10 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 
     /* nav */
     .nav {position:relative; margin-top:250px;}
-    .nav .menu .title {position:relative;  display:inline-block; margin-bottom: 50px;} 
+    .nav .menu .title {position:relative;  display:inline-block; margin-bottom: 50px; overflow: hidden;} 
     .nav .menu .title .loopindex{position:relative; top:10%; left:0; color:#fff; font-size: calc(22px + 33*(100vw - 320px)/1120) ;  font-weight: 400; margin-bottom: 20px;  opacity: .2; } 
-    .nav .menu .title a{ position: relative; display: table;  font-size: calc(46px + 130*(100vw - 320px)/1120); font-weight: 700; letter-spacing: -.02em; line-height: 1.2em;   opacity: .2;  color:#fff;  margin: 15px 0; z-index: 3; cursor:none; }
+    .nav .menu .title a{ position: relative; display: table;  transform:translate(0,150%); font-size: calc(46px + 130*(100vw - 320px)/1120); font-weight: 700; letter-spacing: -.02em; line-height: 1.2em;   opacity: .2;  color:#fff;  margin: 15px 0; z-index: 3; cursor:none; -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.84); transition: -webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.84);}
+    .sec2.show .nav .menu .title a{  transform:translate(0,0); }
     .nav .menu .title .byline{ position: relative; z-index:2; font-size: calc(22px + 33*(100vw - 320px)/1120) ; visibility: hidden; color:#fff;  }
     .nav .menu .title:hover a{opacity:1; }
     .nav .menu .title:hover .loopindex {opacity:1; }
