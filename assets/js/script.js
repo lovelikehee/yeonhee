@@ -11,14 +11,12 @@ $(function () {
     //skroll 
 
 
-
   skrollr.init({
- 
-  mobileCheck: function(){
-                if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-                    // mobile device
-                }
-            }
+//   mobileCheck: function(){
+//                 if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+//                     // mobile device
+//                 }
+//             }
         });
 
     $(window).scroll(function () {
