@@ -43,8 +43,10 @@ $(function () {
         }
         if (wScroll >= $(".sec4").offset().top) {
             $(".sec-end").addClass('show');
+            $(".sec4").hide();
         } else {
             $(".sec-end").removeClass('show');
+            $(".sec4").show();
         }
     });
 
