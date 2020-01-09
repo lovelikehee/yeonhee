@@ -22,12 +22,7 @@ $(function () {
     $(window).scroll(function () {
         var wScroll = parseInt($(this).scrollTop());
         $(".scroll_top").text(wScroll);
-
-        if (wScroll >= $(".sec2").offset().top) {
-            $(".sec2").addClass("show");
-        } else {
-            $(".sec2").removeClass("show");
-        }
+        
         if (wScroll >= $(".sec1").offset().top) {
             $(".sec1").addClass("show");
             $(".bar").addClass("fix-bar");
@@ -41,7 +36,17 @@ $(function () {
         } else {
             $sec.eq(1).removeClass("show");
         }
-        if (wScroll >= $(".sec4").offset().top) {
+        if (wScroll >= $(".sec2").offset().top) {
+            $(".sec2").addClass("show");
+        } else {
+            $(".sec2").removeClass("show");
+        }
+        if (wScroll >= $(".sec3").offset().top) {
+            $(".sec3").addClass("show");
+        } else {
+            $(".sec3").removeClass("show");
+        }
+        if (wScroll >= $(".screen").offset().top) {
             $(".sec-end").addClass('show');
         } else {
             $(".sec-end").removeClass('show');
@@ -56,9 +61,6 @@ $(function () {
                 scrollTop: 0
             }, 200);
         });
-
-
-
 
     //cursor 
     $nav.mouseenter(function () {
