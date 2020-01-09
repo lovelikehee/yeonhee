@@ -30,21 +30,10 @@ $(function () {
             $(".sec1").removeClass("show");
             $(".bar").removeClass("fix-bar");
         }
-        if (wScroll >= $sec.eq(1).offset().top) {
-            $(".bar").removeClass("fix-bar");
-            $(".custom-cursor__text ").find("span").hide();
-        } else {
-            $sec.eq(1).removeClass("show");
-        }
         if (wScroll >= $(".sec2").offset().top) {
             $(".sec2").addClass("show");
         } else {
             $(".sec2").removeClass("show");
-        }
-        if (wScroll >= $(".sec3").offset().top) {
-            $(".sec3").addClass("show");
-        } else {
-            $(".sec3").removeClass("show");
         }
         if (wScroll >= $(".screen").offset().top) {
             $(".sec-end").addClass('show');

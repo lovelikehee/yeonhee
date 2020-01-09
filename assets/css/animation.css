@@ -1,4 +1,22 @@
+@-webkit-keyframes infiniteText {
+  0% {
+      transform: translate3d(100%,0,0)
+  }
 
+  to {
+      transform: translate3d(-100%,0,0)
+  }
+}
+
+@keyframes infiniteText {
+  0% {
+      transform: translate3d(100%,0,0)
+  }
+
+  to {
+      transform: translate3d(-100%,0,0)
+  }
+}
   
 @-webkit-keyframes cursor_ring {
     0% {
