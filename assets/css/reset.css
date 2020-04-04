@@ -1,113 +1,67 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
-/* 여백 초기화 */
-body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{margin:0; padding:0; box-sizing: border-box;}
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;vertical-align:baseline;background:transparent;}
-
-
-* {-webkit-box-sizing: border-box; box-sizing: border-box;}
-body {color:#212121; background-color:#fff; line-height:1; text-rendering:auto; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; -moz-osx-font-smoothing:grayscale; }
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
-::selection { background: hsla(0,0%,100%,.998); color: #000;}
-
-/* a 링크 초기화 */
-a {color:#212121; border:0; margin:0; padding:0; vertical-align:baseline; background:transparent; text-decoration:none; cursor:none;}
-
-/* button 초기화 */
-button {padding: 0; background: none; border: none;font: inherit;text-transform: inherit;line-height: inherit;text-align: inherit;cursor: none;}
-
-/* 폰트 초기화 */
-body, input, textarea, select,  table ,p { font-family: 'Kanit',Helvetica, sans-serif;  color: #222;}
-button ,a {font-family: 'Libre Franklin',Helvetica,Arial,sans-serif;}
-
-/* 폰트 스타일 초기화 */
-em,address {font-style: normal;}
-
-/* 블릿기호 초기화 */
-ul,li,ol {list-style:none;}
-
-/* 제목 태그 초기화 */
-h1,h2,h4,h5,h6,strong,em {font-size: 13px; font-weight: normal; font-family: 'Libre Franklin',Helvetica,Arial,sans-serif;} 
-h1,h3 {font-family: 'Kanit',Helvetica, sans-serif;  color: #222;}
-
-/* 테두리 초기화 */
-img,fieldset {border:0 none;}
-table{border-collapse:collapse;border-spacing:0;}
-
-
-/* 반응형 */
-video,img {max-width: 100%;}
-
-/* clearfix */
-.clearfix::after {content:''; clear:both; display:block; }
-
-
-/* IR 효과 */
-.ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
-.ir_wa {display:block; overflow:hidden; position:relative; z-index:-1; width:100%; height: 100%;} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
-.ir_so {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
-
-/* skroll  */
-.skrollable {position:fixed; z-index:100;}
-.skrollr-mobile .skrollable {position:absolute;}
-.skrollable .skrollable {position:absolute;}
-.skrollable .skrollable .skrollable {position:static;}
-
-/* input style */
-input {background-image: none;}
-input[type=button],
-input[type=reset],
-input[type=text],
-input[type=password],
-input[type=submit],
-input[type=search],
-input[type=tel],
-input[type=email] {
-    -webkit-appearance: none;
-    border-radius: 0
-}
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
-}
-input:checked[type=checkbox] {
-    background-color: #666;
-    -webkit-appearance: checkbox
+/* color theme*/
+:root {
+    --dark: #1e1e1e;
+    --dark-gray: rgba(0,0,0, 0.2);
+    --gray: rgba(255,255,255, 0.2);
+    --light-gray: #f7f7f7;
+    --light: #fff;
+    --primary-color: #02F093;
+    --secondary-color: #5a2abd;
+    --error-color: #932422; 
 }
 
-/* #cursor */
-#cursor {position: fixed; left: 0px; top: 0px; cursor:none; -webkit-transform: translate(-100%, -100%);transform: translate(-100%, -100%);   pointer-events: none; z-index: 91; width: 8px; height: 8px; border-radius: 50%; background: hsla(0,0%,100%,.2);border: 1px solid rgba(26, 26, 26, 0.5);  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.84), transform 0s, -webkit-transform 0s;}
-.no-js #cursor {left: -50px; top:  -50px;}
-#cursor.active {width: 60px; height: 60px;}
-#cursor .cursor__text { position: absolute;left: 50%; top: 50%;  -webkit-transform: translate(-50%, -50%) rotate(45deg);transform: translate(-50%, -50%) rotate(45deg);opacity: 0; -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);}
-#cursor .cursor__text .char1 { -webkit-transform: rotate(-68deg) translate(0, 0); transform: rotate(-68deg) translate(0, 0);}
-#cursor .cursor__text .char2{-webkit-transform:rotate(-56deg) translate(0,0);transform:rotate(-56deg) translate(0,0)}
-#cursor .cursor__text .char3{-webkit-transform:rotate(-44deg) translate(0,0);transform:rotate(-44deg) translate(0,0)}
-#cursor .cursor__text .char4{-webkit-transform:rotate(-32deg) translate(0,0);transform:rotate(-32deg) translate(0,0)}
-#cursor .cursor__text .char5{-webkit-transform:rotate(-20deg) translate(0,0);transform:rotate(-20deg) translate(0,0)}
-#cursor .cursor__text .char6{-webkit-transform:rotate(-8deg) translate(0,0);transform:rotate(-8deg) translate(0,0)}
-#cursor .cursor__text .char7{-webkit-transform:rotate(4deg) translate(0,0);transform:rotate(4deg) translate(0,0)}
-#cursor .cursor__text .char8{-webkit-transform:rotate(16deg) translate(0,0);transform:rotate(16deg) translate(0,0)}
-#cursor .cursor__text .char9{-webkit-transform:rotate(28deg) translate(0,0);transform:rotate(28deg) translate(0,0)}
-#cursor .cursor__text .char10{-webkit-transform:rotate(40deg) translate(0,0);transform:rotate(40deg) translate(0,0)}
-#cursor .cursor__text .char11{-webkit-transform:rotate(52deg) translate(0,0);transform:rotate(52deg) translate(0,0)}
-#cursor .cursor__text .char12{-webkit-transform:rotate(64deg) translate(0,0);transform:rotate(64deg) translate(0,0)}
-#cursor .cursor__text .char13{-webkit-transform:rotate(76deg) translate(0,0);transform:rotate(76deg) translate(0,0)}
-#cursor .cursor__text .char14{-webkit-transform:rotate(88deg) translate(0,0);transform:rotate(88deg) translate(0,0)}
-#cursor .cursor__text .char15{-webkit-transform:rotate(100deg) translate(0,0);transform:rotate(100deg) translate(0,0)}
-#cursor .cursor__text .char16{-webkit-transform:rotate(112deg) translate(0,0);transform:rotate(112deg) translate(0,0)}
-#cursor .cursor__text .char17{-webkit-transform:rotate(124deg) translate(0,0);transform:rotate(124deg) translate(0,0)}
-#cursor .cursor__text .char18{-webkit-transform:rotate(136deg) translate(0,0);transform:rotate(136deg) translate(0,0)}
-#cursor .cursor__text .char19{-webkit-transform:rotate(148deg) translate(0,0);transform:rotate(148deg) translate(0,0)}
-#cursor .cursor__text .char20{-webkit-transform:rotate(160deg) translate(0,0);transform:rotate(160deg) translate(0,0)}
-#cursor .cursor__text span{position:absolute;left:0;bottom:0;-webkit-transform-origin:0 100%;transform-origin:0 100%;display:inline-block;width:5px;height:25px;color:#595959;font-size:8px;text-align:center;-webkit-transition:height .2s cubic-bezier(.645,.045,.355,1);transition:height .2s cubic-bezier(.645,.045,.355,1)}
-#cursor svg{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%) rotate(-90deg);transform:translate(-50%,-50%) rotate(-90deg);width:calc(100% + 6px);height:calc(100% + 6px);opacity:0}
-#cursor svg circle{stroke-dasharray:188.49556;stroke-dashoffset:188.49556}
-#cursor.processing:not(.detailed){border:1px solid rgba(26,26,26,.25)}
-#cursor.processing:not(.detailed) svg{opacity:.6;-webkit-transition:opacity .2s cubic-bezier(.645,.045,.355,1) .2s;transition:opacity .2s cubic-bezier(.645,.045,.355,1) .2s}#cursor.processing:not(.detailed) svg circle{stroke-dashoffset:0;-webkit-transition:stroke-dashoffset 1.5s ease-in-out;transition:stroke-dashoffset 1.5s ease-in-out}
-#cursor.detailed .cursor__text{opacity:1;-webkit-transform:translate(-50%,-50%) rotate(0);transform:translate(-50%,-50%) rotate(0)}
-#cursor.detailed .cursor__text span{height:42px}body:active #cursor{-webkit-animation:cursor_ring .4s;animation:cursor_ring .4s}
-.link{margin-top:-15px;margin-bottom:-15px;padding:15px 0;display:inline-block;background:-webkit-gradient(linear,left top,right top,color-stop(0,#1a1a1a),color-stop(33%,#1a1a1a),color-stop(33%,transparent),color-stop(66%,transparent),color-stop(66%,#1a1a1a),to(#1a1a1a)) left bottom transparent no-repeat;background:linear-gradient(to right,#1a1a1a 0,#1a1a1a 33%,transparent 33%,transparent 66%,#1a1a1a 66%,#1a1a1a 100%) left bottom transparent no-repeat;background-size:300% 1px;background-position:100% calc(100% - 15px);-webkit-transition:background .5s cubic-bezier(.645,.045,.355,1); transition:background .5s cubic-bezier(.645,.045,.355,1);}
-.link:focus,.link:hover{color:#1a1a1a;background-position:0 calc(100% - 15px)}
+*{-webkit-font-smoothing:antialiased;font-smoothing:antialiased;}
+body{background-color: var(--dark); color:var(--light);font-size:14px; font-family: 'Mukta', sans-serif;}
+body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select{margin:0;padding:0; font-weight:normal;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,iframe,th,td{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,dt{font-weight:normal;}
+img,fieldset,iframe,button{border:0 none;}
+table{border-collapse:collapse;border-spacing:0}
+th, td{border-collapse:collapse;}
+ol, ul, dl{list-style:none;}
+li{list-style:none;}
+a{color:inherit; text-decoration:none; display:block;}
+img{vertical-align:top}
+address, caption, em, var{font-style:normal;font-weight:normal;}
+input, textarea, select{letter-spacing:normal;}
+button {border:0; background:none; cursor:pointer; -webkit-appearance:none;}
+::-webkit-input-placeholder {color:#555;}
+input[type="text"],input[type="password"],input[type="time"],input[type="date"],input[type="email"],input[type="tel"],input[type="number"],input[type="file"],input[type="radio"],input[type="search"]{width:100%; vertical-align:middle; color:#000; box-sizing:border-box; border:1px solid #000; -webkit-appearance:none;}
+strong{font-weight:normal}
+::-moz-selection {background-color: var(--gray);color: var(--light)}
+::selection {background-color: var(--gray); color: var(--light)}
+
+/* none */
+.hidden {display:none;}
+.blind, legend {position:absolute; clip:rect(1px, 1px, 1px, 1px); clip-path: inset(0px 0px 99.9% 99.9%); overflow:hidden; height:1px; width:1px; padding: 0; border:0; top:50%;}
+
+/* style */
+svg {width:100%; height:100%;}
+.dot-one , .dot-four {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center;-ms-flex-align: center;align-items: center}
+.dot-one:before,.dot-four:before {line-height: 0;margin-top: 1px}
+.dot-one:before {content: url(../images/dot-one.svg); width: 5px; height: 5px; margin-right: .52vw}
+@media only screen and (max-width: 560px) { .dot-one:before {margin-right:7px }}
+.dot-four:before {content: url(../images/dot-four.svg);width: .85em;margin-right: .7em}
+
+header > div , header  > div nav , header >div nav ul li a , .action-button{
+    -webkit-transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
+    transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
+    transition: transform .25s cubic-bezier(0,0,.25,1);
+    transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1)
+}
+
+.opacity {
+-webkit-transition: opacity .25s cubic-bezier(.25,.25,.75,.75);
+transition: opacity .25s cubic-bezier(.25,.25,.75,.75);
+}
+
+.transform {
+    -webkit-transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
+    transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
+    transition: transform .25s cubic-bezier(0,0,.25,1);
+    transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1);
+}

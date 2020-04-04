@@ -1,454 +1,175 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Search Engine-->
-  <meta name="description" content="패럴럭스를 활용한 반응형 포트폴리오입니다.">
-  <meta name="keywords" content="퍼블리셔, 포토폴리오, 퍼블리쉬 , portfolio, Publisher, font-end, unique, webdesign ">
-  <!-- Schema.org-->
-  <meta itemprop="name" content="연희포트폴리오 || Yeonhee Portfolio">
-  <meta itemprop="description" content="패럴럭스를 활용한 반응형 포트폴리오입니다.">
-  <!-- Open Graph general-->
-  <meta property="og:title" content="연희포트폴리오">
-  <meta property="og:type" content="portfolio">
-  <meta property="og:image" content="https://szlovelygirl.blog.me/me.jpg">
-  <meta property="og:url" content="https://szlovelygirl.blog.me">
-  <meta property="og:description" content="패럴럭스를 활용한 반응형 포트폴리오입니다." />
-
-  <!-- Favicon-->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
-  <title> 연희포트폴리오 || Yeonhee Portfolio</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/animation.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- HTLM5shiv ie6~8 -->
-  <!--[if lt IE 9]> 
-        <script src="assets/js/html5shiv.min.js"></script>
-        <script type="text/javascript">
-            alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
-        </script>
-    <![endif]-->
-</head>
-
-<body class="no-js">
-  <div class="screen-loader">
-    <div class="screen-loader__text">Hee Portfolio ON</div>
-    <div class="progress">
-      <div class="progress__present"></div>
-      <div class="progress__holder"></div>
-    </div>
-  </div>
-  <script>
-    (function () {
-      document.body.classList.remove('no-js');
-      var perfData = window.performance.timing,
-        EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-        loadingTime = parseInt((EstimatedTime / 1000) % 60) * 100;
-      var progressBar = document.getElementsByClassName('progress__present')[0];
-      progressBar.style.transition = 'width ' + loadingTime + 'ms cubic-bezier(0.215, 0.61, 0.355, 1)';
-      progressBar.style.width = progressBar.parentElement.offsetWidth * 0.9 + 'px';
-    })();
-  </script>
-  <div class="info">
-    <span class="scroll_top">0</span>
-  </div>
-  <!--START contentArea-->
-  <div id="contentsArea">
-    <section class="visual full-video">
-      <div class="container">
-        <div class="home_noise noise-bg"></div>
-        <div class="noise-container">
-          <video class="main-video" muted loop autoplay preload="auto" playsinline
-            poster="https://somethinginc.imgix.net/video-heros/image/something-poster.jpg?auto=compress%2Cformat&amp;fit=clip&amp;q=75&amp;w=1680&amp;s=1205bea4b1381efa55e510e09f05f277">
-            <source
-              src="https://d37jgyld0n0bdl.cloudfront.net/pages/home/hero/large/mp4/home-hero-large.mp4?mtime=20190415165744"
-              type="video/mp4">
-          </video>
-          <div class="noise-bg clickable"></div>
-        </div>
-        <svg class="noise-logo" xmlns="http://www.w3.org/2000/svg" viewBox="120 345.2 791 152">
-          <path
-            d="M194.3 353.9c6.5 2.6 13.3 6.9 20.5 13.1l-12.6 15.1c-6.3-5.2-11.6-8.8-16-10.6-4.5-1.9-9.6-2.8-15.6-2.8-12.2 0-20 5.6-20 13.4 0 5.6 3.7 8.5 10.5 10.6 3.4 1.1 8.8 2.6 16.2 4.3 28.1 6.9 38.4 13.1 39 31.9 0 20.8-16.8 35.6-43.3 35.6-9.7 0-18-1.5-25.3-4.6-7.2-2.9-15.1-8.2-23.3-15.6l13-15.3c7.2 6.3 13.6 10.8 18.7 13.1 5.1 2.3 10.8 3.5 17.4 3.5 12.8 0 21.4-5.7 21.4-15.1 0-5.7-3.9-8.9-9.6-10.9-2.9-.9-7.2-2-13-3.2l-5.3-1.1c-29.3-7.1-37.8-15.1-37.8-32.5 0-18.3 17-32.7 41.8-32.7 8.9-.1 16.6 1.2 23.3 3.8zm113.8 68.6c0 25-17.1 41.9-40.9 41.9-23.9 0-41-17-41-41.9s17.1-41.9 41-41.9c23.8 0 40.9 16.9 40.9 41.9zm-61.5 0c0 15.3 8.2 25 20.7 25 12.3 0 20.5-9.7 20.5-25 0-15-8.2-25-20.5-25-12.5 0-20.7 10-20.7 25zM432 406.9v55h-20v-49c0-9.4-3.9-15.1-12.5-15.1-8.8 0-13.9 6.5-13.9 15.7v48.4h-20v-49c0-10-4.2-15.1-12.5-15.1-8.8 0-13.9 6.5-13.9 15.7v48.4h-20v-78.8h18.7v8.8c4.6-7.6 12.2-11.4 22.5-11.4 10 0 17.6 4.2 21.9 11.6 5.4-7.7 13.3-11.6 23.6-11.6 16.6.1 26.1 10.2 26.1 26.4zm66.4 38.3c3.1-1.5 7.1-4.3 12-8.5l11.3 12.3c-11.1 11.3-21.7 15.4-35.2 15.4-25.4 0-41.3-16.3-41.3-41.5 0-24.5 15.1-42.4 39.6-42.4 23.6 0 36.9 14.6 36.9 39.3 0 2.9-.2 5.6-.3 7.9h-56.6c1.9 12.2 9.1 19.7 22.2 19.7 4.5.1 8.2-.7 11.4-2.2zm-33.1-31.8h36.9c-.8-10.6-7.2-17.1-17.9-17.1-10.4 0-16.7 6.5-19 17.1zm115.5 47.5c-5.9 2-11.7 2.9-17.7 2.9-15.6 0-22.4-7.2-22.4-22.2v-43.2h-14v-15.3h14v-24.4h20v24.4h18.8v15.3h-18.8v40.7c0 5.4 2.3 7.2 7.9 7.2 2.8 0 6-.5 9.9-1.4l2.3 16zm81.3-52.9v54h-20v-48c0-10.5-5.2-16.2-14.6-16.2-9.3 0-15.9 6.8-15.9 16.7V462h-20V352.5h20v37.8c5.1-6.2 12.6-9.7 22.4-9.7 17.8 0 28.1 10.9 28.1 27.4zm35.8-36.7h-20v-18.8h20v18.8zm0 90.7h-20v-78.8h20V462zm87.9-54v54h-20v-48c0-10.5-5.2-16.2-14.6-16.2-9.3 0-15.9 6.8-15.9 16.7V462h-20v-78.8H734v8.9c5.1-7.4 13.3-11.6 23.7-11.6 17.8.1 28.1 11 28.1 27.5zm88.1-24.8v74.9c0 22.2-16.3 34.1-38.5 34.1-13.1 0-25.6-3.9-37.5-11.6l9.7-14.5c11.6 6.8 18.7 9.4 27.4 9.4 11.7 0 19.3-6 19.3-19.1v-6.3c-5.4 6.6-13 10-23 10-19.9 0-34.7-16.2-34.7-39.8 0-23.4 14.8-39.8 34.7-39.8 10.9 0 19 3.9 24.1 11.4v-8.8h18.5v.1zM855 420.3c0-13.6-8-22.7-19.1-22.7-11.3 0-19 9.1-19 22.7s7.7 22.8 19 22.8c11 .1 19.1-9.2 19.1-22.8zM895.1 368.2h-2.6v7.3h-2.1v-7.3h-2.6v-1.8h7.2l.1 1.8zm11.3-1.8v9.1h-2V368.1c-.3 1.1-.5 2-.8 2.8l-1.4 4.6h-1.8l-1.4-4.6-.4-1.3c-.3-.9-.4-1.4-.4-1.5v7.3h-2v-9.1h3.2l1.1 3.6c.3 1.1.6 2 .8 2.8.2-.8.4-1.7.8-2.8l1.1-3.6h3.2v.1z">
-          </path>
-        </svg>
-      </div>
-    </section>
-    <!--//END full-video-->
-    <nav>
-      <section class="sec1 nav_title">
-        <div class="bar"></div>
-        <div class="desc clearfix">
-          <div class="row">
-            <h2 class="title">
-              A creative partner for ambitious brands & independent creators </h2>
-          </div>
-        </div>
-      </section>
-      <section class="sec2">
-        <div class="moving">
-          <div class="marquee clearfix">
-            <span>Current Openings: Plannig. Design. Dvelopment. Publishing.</span>
-            <span>CURRENT OPENINGS: PLANNING. DESIGN. DEVELOPMENT. PUBLISHING.</span>
-          </div>
-        </div>
-        <div class="nav">
-          <div class="menu  row clearfix">
-            <div class="title">
-              <span class="loopindex">01</span>
-              <a href="#">My Ability</a>
-              <p class="byline">Program skill</p>
-              <div class="excerpt-assets nav-img02">
-                <img class="excerpt-img" src="assets/images/nav_img02.jpg" alt="nav02">
-              </div>
-            </div>
-            <div class="title">
-              <span class="loopindex">02</span>
-              <a href="#">Publishing</a>
-              <p class="byline">Work experience</p>
-              <div class="excerpt-assets nav-img01">
-                <img class="excerpt-img" src="assets/images/nav_img01.jpg" alt="nav01">
-              </div>
-            </div>
-            <div class="title">
-              <span class="loopindex">03</span>
-              <a href="#">Keep in touch</a>
-              <p class="byline">Get hold of me</p>
-              <div class="excerpt-assets nav-img03">
-                <img class="excerpt-img" src="assets/images/nav_img03.jpg" alt="nav03">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </nav>
-    <!--START main-->
-    <main>
-      <!-- <section class="sec3">
-        <div class="c-section -dark -mask -paddingHuge u-textCenter" id="customization" data-scroll-section>
-          <div class="u-overflow" data-module-poster="one" data-scroll data-scroll-call="section" data-scroll-offset="50%" data-scroll-sectionid="2" data-scroll-repeat>
-          <div class="c-posterZone">
-          <div class="c-posterZone_wrap">
-          <div class="c-posterZone_line -text -hidden"></div>
-          <button class="c-posterZone_line -text" type="button" data-poster="changeWeight">
-          <span class="c-posterZone_button">
-          <span class="c-button -white">
-          <span class="c-button_label">Change</span>
-          </span>
-          </span>
-          </button>
-          <button class="c-posterZone_line -text" type="button" data-poster="changeText">
-          <span class="c-posterZone_button">
-          <span class="c-button -white">
-          <span class="c-button_label">Change</span>
-          </span>
-          </span>
-          </button>
-          <button class="c-posterZone_line -background" type="button" data-poster="changeBackground">
-          <span class="c-posterZone_button">
-          <span class="c-button -white">
-          <span class="c-button_label">Change</span>
-          </span>
-          </span>
-          </button>
-          </div>
-          <div class="o-container">
-          <div class="c-poster" data-poster="main" data-poster-weight="light">
-          <div class="c-poster_background">
-          <picture>
-          <source type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-poster="imgw">
-          <source type="image/jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-poster="imgj">
-          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Editorial New first customizer" data-poster="img">
-          </picture>
-          </div>
-          <div class="c-poster_title">
-          Editorial New
-          </div>
-          <div class="c-poster_weight" data-poster="weight">
-          ↘ Light
-          </div>
-          <div class="c-poster_infiniteText">
-          <span data-poster="text">Reliable</span><span data-poster="text">Reliable</span><span data-poster="text">Reliable</span>
-          </div>
-          </div>
-          </div>
-          </div>
-          <div class="o-container">
-          <button class="c-button -white -large" type="button" data-poster="random">
-          <span class="c-button_label">Randomize</span>
-          </button>
-          </div>
-          </div>
-          </div>
-      </section> -->
-            <!--START sec4-->
-      <section class="sec4 Numbers ">
-        <div class="o-container">
-          <div class="c-hugeNumbers" data-module-numbers>
-            <div class="c-hugeNumbers_wrap">
-              <div class="c-hugeNumbers_main" data-numbers="wrap">
-                <div class="c-hugeNumbers_half -top"><span
-                    class="c-hugeNumbers_character">Y</span><span class="c-hugeNumbers_character">e</span><span class="c-hugeNumbers_character">e</span></div>
-                <div class="c-hugeNumbers_half"><span
-                    class="c-hugeNumbers_character">Y</span><span class="c-hugeNumbers_character">e</span><span class="c-hugeNumbers_character">e</span></div>
-              </div>
-              <div class="c-hugeNumbers_text" data-scroll data-scroll-speed="1.5">
-                { copyright ©2020}<br> lovelikehee
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="c-section_fold" data-scroll data-scroll-speed="10" data-scroll-offset="-306px"
-          data-scroll-direction="horizontal" data-scroll-position="elementTop" data-scroll-target="#customization">
-          <div class="c-section_fold_paper" data-scroll data-scroll-speed="10" data-scroll-offset="-306px"
-            data-scroll-position="elementTop" data-scroll-target="#customization"></div>
-          <div class="c-section_fold_background"></div>
-        </div>
-      </section>
-      <!--//END sec4-->
-      <!--START screen-->
-      <section class="screen"></section>
-      <!--//END screen-->
-      <!--START sec-end-->
-      <section class="sec-end">
-        <div class="wrap" >
-          <div class="header">
-            <div class="logo clickable" data-direction="0">Myles No.</div>
-            <div class="navigation">
-              <div class="scrollbar">
-                <div class="clickable virgin" id="scrollbar__thumb"><span class="text--small">Grab me</span></div>
-              </div>
-            </div>
-          </div>
-          <div id="rendered">
-            <div id="canvas"></div>
-          </div>
-          <div id="page">
-            <div class="section section--front current" data-label="Pilot">
-              <div class="col reserved-space"></div>
-              <div class="col title-wrap">
-                <h2 class="col__item title text--giant text--bold">
-                  <span class="title__text plane">Finally</span>
-                  <span class="title__text plane">introduce</span>
-                  <span class="title__text plane">My work</span>
-                  <span class="text--small plane">Better than nothing ! I hope you like it 🤣</span></h2>
-              </div>
-              <div class="col cta-wrap">
-                <div class="col__item copyright">
-                  <span class="text--large">
-                    <span class="copyright__text plane vert eleft">©2020</span></span>
-                </div>
-                <div class="col__item cta">
-                  <div class="cta__text-wrap"><span class="text--big">Let’s talk about<br>your Big stuff</span><span
-                      class="text--regular">& My future</span></div><a class="link"
-                    href="mailto:yeonhee_dev@naver.com">yeonhee_dev@naver.com</a>
-                </div>
-              </div>
-              <button class="section__nav section__nav--right noselect clickable"><span
-                  class="text--giant text--bold"><span>&nbsp;&nbsp;&nbsp;Recent</span><br><span>&nbsp;&nbsp;&nbsp;Work</span></span></button>
-            </div>
-            <div class="section section--work" data-label="Work 01">
-              <div class="col project-wrap">
-                <div class="col__item project">
-                  <div class="project__count"><span class="project__count-current reveal">01</span><span
-                      class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
-                    target="_blank" href="http://lovelikehee.dothome.co.kr/index.html">
-                    <div class="project__image-container plane plane--media"><img data-src="assets/images/work01.jpg"
-                        alt="responsive cover" />
-                      <video data-src="assets/video/megabox.mp4"></video>
-                      <noscript><img src="assets/images/work01.jpg" alt="responsive cover" />
-                        <video src="assets/video/megabox.mp4" muted="muted" autoplay="autoplay" loop="loop"
-                          preload="preload"></video>
-                      </noscript>
-                    </div>
-                  </a>
-                  <div class="project__meta">
-                    <h3 class="project__meta-title plane">Mega Box</h3>
-                    <div class="project__meta-tags">
-                      <div class="reveal"><span>Webstandard</span><span>Responsive</span><span>Javascript</span>
-                      </div>
-                      <div class="reveal"><span>Publishing</span><span>Development</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="section__nav section__nav--left noselect clickable"><span
-                  class="text--giant text--bold"><span>Back</span></span></button>
-              <button class="section__nav section__nav--right noselect clickable"><span
-                  class="text--giant text--bold"><span>Next</span></span></button>
-            </div>
-            <div class="section section--work" data-label="Work 02">
-              <div class="col project-wrap">
-                <div class="col__item project">
-                  <div class="project__count"><span class="project__count-current reveal">02</span><span
-                      class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
-                    target="_blank" href="http://yeonheee.dothome.co.kr/cjw/index.html">
-                    <div class="project__image-container plane plane--media"><img data-src="assets/images/work02.jpg"
-                        alt="Whalen Financial Planning project cover" />
-                      <video data-src="assets/video/cjw.mp4"></video>
-                      <noscript><img src="assets/images/work02.jpg" alt="Whalen Financial Planning project cover" />
-                        <video src="assets/video/cjw.mp4" muted="muted" autoplay="autoplay" loop="loop"
-                          preload="preload"></video>
-                      </noscript>
-                    </div>
-                  </a>
-                  <div class="project__meta">
-                    <h3 class="project__meta-title plane">Chungjungone</h3>
-                    <div class="project__meta-tags">
-                      <div class="reveal"><span>mobile</span><span>HTML5/CSS3</span><span>javascript</span>
-                      </div>
-                      <div class="reveal"><span>Publishing</span><span>Development</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="section__nav section__nav--left noselect clickable"><span
-                  class="text--giant text--bold"><span>Back</span></span></button>
-              <button class="section__nav section__nav--right noselect clickable"><span
-                  class="text--giant text--bold"><span>Next</span></span></button>
-            </div>
-            <div class="section section--work" data-label="Work 03">
-              <div class="col project-wrap">
-                <div class="col__item project">
-                  <div class="project__count"><span class="project__count-current reveal">03</span><span
-                      class="project__count-total reveal">/ 03</span></div><a class="project__image noselect"
-                    target="_blank" href="https://www.behance.net/gallery/84896693/Gym-Watch-Concept">
-                    <div class="project__image-container plane plane--media"><img data-src="assets/images/work03.jpg"
-                        alt="Gym Watch project cover" />
-                      <video data-src="assets/video/samsung.mp4"></video>
-                      <noscript><img src="assets/images/work03.jpg" alt="Gym Watch project cover" />
-                        <video src="assets/video/samsung.mp4" muted="muted" autoplay="autoplay" loop="loop"
-                          preload="preload"></video>
-                      </noscript>
-                    </div>
-                  </a>
-                  <div class="project__meta">
-                    <h3 class="project__meta-title plane">SAMSUNG</h3>
-                    <div class="project__meta-tags">
-                      <div class="reveal"><span>webstandard</span><span>HTML5/CSS3</span><span>javascript</span>
-                      </div>
-                      <div class="reveal"><span>Publishing</span><span>Design</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="section__nav section__nav--left noselect clickable"><span
-                  class="text--giant text--bold"><span>Back</span></span></button>
-              <button class="section__nav section__nav--right noselect clickable"><span
-                  class="text--giant text--bold"><span>Next</span></span></button>
-            </div>
-            <div class="section section--quote" data-label="Brains">
-              <div class="col">
-                <div class="col__item quote-wrap">
-                  <div class="quote">
-                    <div class="intro-text text--regular"><span class="reveal">A biased quote </span><span class="reveal">To make me look smart</span><span class="reveal">— or like a moron</span></div>
-                    <div class="statue">
-                      <div class="statue__img"><img data-src="assets/images/statue.png" alt="David statue head" data-sampler="statueTexture">
-                        <noscript><img src="assets/images/statue.png" alt="David statue head"></noscript><img class="map" data-src="assets/images/statue_map.jpg" data-sampler="statueMapTexture">
-                      </div>
-                      <div id="canvas-statue"></div>
-                      <div class="statue__text-wrap text--small"><span class="statue__text">This trendy statue head is floating around here for absolutely no reason — </span></div>
-                    </div>
-                    <div class="quote__text"><span class="plane">creative</span><span class="plane">is like a</span><span class="plane">—fart.</span><span class="align-right plane">If you—</span>
-                      <div class="align-right"><div>—–</div>
-                        <div><span class="plane">force it,</span><span class="plane">It’s</span><span class="plane">probrably</span></div>
-                      </div><span class="align-right plane">crap.</span><span class="quote-mark quote-mark--open plane">“</span><span  class="quote-mark quote-mark--close plane">”</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="section__nav section__nav--left noselect clickable"><span
-                  class="text--giant text--bold"><span>Back</span></span></button>
-              <button class="section__nav section__nav--right noselect clickable"><span
-                  class="text--giant text--bold"><span>Next</span></span></button>
-            </div>
-            <div class="section section--end" data-label="That's it">
-              <div class="col cta-wrap">
-                <div class="col__item cta">
-                  <div class="cta__title text--big"> Let's chat !</div>
-                  <div class="join">
-                    <div class="join__wrap">
-                      <p class="text--regular">Have a question or just want to get in touch?</p>
-                      <form action="https://formspree.io/yeonhee_dev@naver.com" method="POST" class="form clearfix text--small">
-                        <input id="name" type="text" name="name" placeholder="your name">
-                        <input id="email" class="email" type="email" name="_replyto" placeholder="your email">
-                        <textarea id="contents" type="contents" cols="40" rows="13"
-                          placeholder="please write your message here."></textarea>
-                          <button type="submit" value="Send" id="submit" class="text--regular"><span>Send</span></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="cta__reference dot">There is another way <a class="link" href="mailto:yeonhee_dev@naver.com">Say no more</a></div>
-                  <div class="cta__deco"> <span class="plane vert">nice</span><span class="plane vert">day</span></div>
-                </div>
-              </div>
-              <button class="section__nav section__nav--left noselect clickable"><span
-                  class="text--giant text--bold"><span>Back</span></span></button>
-              <button class="section__nav section__up noselect clickable"><span
-                  class="text--giant text--bold"><span>▲Up</span></span></button>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="stalking">
-              <div class="stalking__text"><span>Don't forget your right to stalk me</span></div>
-              <div class="stalking__media">
-                <a target="_blank" href="http://lovelikekim.dothome.co.kr/index01.html">Pf
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
-                    <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
-                  </svg>
-                </a>
-                <a target="_blank" href="https://szlovelygirl.blog.me">Bg
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
-                    <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
-                  </svg></a><a target="_blank" href="https://www.instagram.com/lovelikehee/">In
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none">
-                    <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="15" cy="15" r="12.5"></circle>
-                  </svg></a></div>
-            </div>
-            <div class="contact"></div>
-          </div>
-          <div class="page-bg plane"></div>
-          <img id="pattern" src="assets/images/pattern.png">
-        </div>
-      </section>
-      <!--//END sec-end-->
-    </main>
-    <!--//END main-->
-  </div>
-  <div id="cursor"><span class="cursor__text">View on Site</span>
-    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
-      <circle class="progress" stroke-width="1" stroke="#1A1A1A" cx="32" cy="32" r="29.5"></circle>
-    </svg>
-    <span class="custom-cursor__text"><span class="custom-cursor__text__text">Play</span></span>
-  </div>
-  <!-- //END contentArea  -->
-  <!--START footer-->
-  <footer>
-    <!--script -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Search Engine-->
+    <meta name="description" content="Portfoplio Responsive Site">
+    <meta name="keywords" content="퍼블리셔, 포토폴리오, 퍼블리쉬 , portfolio, Publisher, font-end, unique, webdesign ">
+    <!-- Schema.org-->
+    <meta itemprop="name" content="Yeonhee Kim Portfolio">
+    <meta itemprop="description" content="반응형 포트폴리오입니다.">
+    <!-- Open Graph general-->
+    <meta property="og:title" content="김연희 포트폴리오">
+    <meta property="og:type" content="Yeonhee Kim Portfolio">
+    <meta property="og:image" content="https://szlovelygirl.blog.me/me.jpg">
+    <meta property="og:url" content="https://szlovelygirl.blog.me">
+    <meta property="og:description" content="반응형 포트폴리오입니다." />
+    <title>HEE — Portfolio</title>
+    <!-- Favicon -->
+    <link href="assets/images/favicon32.ico" rel="icon" sizes="32x32" type="image/ico">
+    <link href="assets/images/favicon256.ico" rel="icon" sizes="256x256" type="image/ico">
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/skrollr.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125996448-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-125996448-2');
-    </script>
-
-  </footer>
+</head>
+<body>
+    <div class="wrap">
+        <header class="main-gnb">
+            <div class="header-wrap inner">
+                <h1 class="header-logo">
+                    <a href="#">
+                        <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox ="0 0 653 605" width="653px" height="605px">
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M1.000,1.000 L134.000,1.000 L1.000,138.000 L1.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M134.000,1.000 L134.000,138.000 L1.000,137.000 L134.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M134.259,137.000 L1.000,137.000 L1.000,270.000 L134.259,137.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M134.000,134.000 L134.000,296.000 L1.000,296.000 L1.000,267.000 L134.000,134.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M1.000,294.000 L1.000,427.000 L134.000,294.000 L1.000,294.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M134.000,288.000 L134.000,473.000 L1.000,473.000 L1.000,425.000 L134.000,288.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M1.000,468.000 L2.000,603.000 L134.000,468.000 L1.000,468.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M2.000,603.000 L134.000,603.000 L134.000,467.000 L2.000,603.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M257.000,1.000 L390.000,1.000 L257.000,138.000 L257.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M390.000,1.000 L390.000,138.000 L257.000,137.000 L390.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M390.259,137.000 L257.000,137.000 L257.000,270.000 L390.259,137.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M390.000,134.000 L390.000,296.000 L257.000,296.000 L257.000,267.000 L390.000,134.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M257.000,294.000 L257.000,427.000 L390.000,294.000 L257.000,294.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M390.000,288.000 L390.000,473.000 L257.000,473.000 L257.000,425.000 L390.000,288.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M257.000,468.000 L258.000,603.000 L390.000,468.000 L257.000,468.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M258.000,603.000 L390.000,603.000 L390.000,467.000 L258.000,603.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M517.000,1.000 L650.000,1.000 L517.000,138.000 L517.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M650.000,1.000 L650.000,138.000 L517.000,137.000 L650.000,1.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M650.259,137.000 L517.000,137.000 L517.000,270.000 L650.259,137.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M650.000,134.000 L650.000,296.000 L517.000,296.000 L517.000,267.000 L650.000,134.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M517.000,294.000 L517.000,427.000 L650.000,294.000 L517.000,294.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M650.000,288.000 L650.000,473.000 L517.000,473.000 L517.000,425.000 L650.000,288.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M517.000,468.000 L518.000,603.000 L650.000,468.000 L517.000,468.000 Z"/>
+                            <path fill-rule="evenodd"  stroke="rgb(2, 241, 148)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(2, 241, 148)"
+                            d="M518.000,603.000 L650.000,603.000 L650.000,467.000 L518.000,603.000 Z"/>
+                            <path fill-rule="evenodd"  fill="rgb(2, 241, 148)"
+                            d="M192.000,221.000 C260.351,216.860 260.476,288.000 260.476,288.000 C260.476,288.000 266.028,354.000 192.000,354.000 C117.972,354.000 109.390,226.003 192.000,221.000 Z"/>
+                            <path fill-rule="evenodd"  fill="rgb(2, 241, 148)"
+                            d="M450.000,221.000 C518.351,216.860 518.476,288.000 518.476,288.000 C518.476,288.000 524.028,354.000 450.000,354.000 C375.972,354.000 367.390,226.003 450.000,221.000 Z"/>
+                        </svg>
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a class="dot-four" href="#">works</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="action-button"><a class="dot-one" href="#">other design portfolio</a></div>
+           </div>
+        </header>
+        <main>
+            <div class="inner">
+                <div class="paging">
+                    <div class="current-area">
+                        <ul class="current">
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                            <li>05</li>
+                            <li>06</li>
+                        </ul>
+                    </div>
+                    <p class="total-area stroke"><span>/</span> 06</p>
+                </div>
+                <div class="scroll-text"></div>
+                <div class="carousel">
+                    <ul class="carousel-wrap inner">
+                        <li class="active">
+                            <div class="dot">
+                                <p>01</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        </li>
+                        <li>
+                            <div class="dot">
+                                <p>02</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        <div class="row-line"></div>
+                        </li>
+                        <li>
+                            <div class="dot">
+                                <p>03</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        <div class="row-line"></div>
+                        </li>
+                        <li>
+                            <div class="dot">
+                                <p>04</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        <div class="row-line"></div>
+                        </li>
+                        <li>
+                            <div class="dot">
+                                <p>05</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        <div class="row-line"></div>
+                        </li>
+                        <li>
+                            <div class="dot">
+                                <p>06</p>
+                                <div class="column-line"></div>
+                                <a href="#"></a>
+                        </div>
+                        <div class="row-line"></div>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
 </body>
 
 </html>
