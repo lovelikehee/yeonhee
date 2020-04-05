@@ -1,5 +1,5 @@
-$(function(){
-
+$(function(e){
+    e.preventDefalut;
  let dot =  $(".carousel").find("li");
 
 dot.click(function(e){

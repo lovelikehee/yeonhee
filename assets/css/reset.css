@@ -3,7 +3,7 @@
 
 /* color theme*/
 :root {
-    --dark: #1e1e1e;
+    --dark: rgba(30,30,30,1);
     --dark-gray: rgba(0,0,0, 0.2);
     --gray: rgba(255,255,255, 0.2);
     --light-gray: #f7f7f7;
@@ -11,10 +11,11 @@
     --primary-color: #02F093;
     --secondary-color: #5a2abd;
     --error-color: #932422; 
+    --localnav-height: 52px;
 }
 
 *{-webkit-font-smoothing:antialiased;font-smoothing:antialiased;}
-body{background-color: var(--dark); color:var(--light);font-size:14px; font-family: 'Mukta', sans-serif;}
+body{background-color: var(--dark); color:var(--light);font-size:14px; font-family: 'Mukta', sans-serif;  box-sizing: border-box;}
 body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select{margin:0;padding:0; font-weight:normal;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,iframe,th,td{margin:0;padding:0;}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;margin:0;padding:0;}
@@ -65,3 +66,42 @@ transition: opacity .25s cubic-bezier(.25,.25,.75,.75);
     transition: transform .25s cubic-bezier(0,0,.25,1);
     transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1);
 }
+
+
+/* .paging */ 
+.paging {display:flex;position:sticky;  top:30%; left: 6.25vw; height:4vh;  color: var(--light); font-size: 1em;}
+.paging .current-area {height:3vh; overflow: hidden; text-align: center;}
+.paging .current-area .currunt{width:100%; height:3vh; overflow: hidden; text-align: center;}
+.paging .total-area  {align-self: flex-end;}
+.paging  .stroke {-webkit-text-stroke: .05vw var(--gray); text-stroke: .05vw var(--gray); color: transparent;}
+
+
+/*.carousel*/
+.carousel {position:-webkit-sticky; position:sticky;  bottom:6.02vh; left:0; width:100%; z-index: 9999;}
+.carousel-wrap li {position:relative; display:flex; align-items:center; justify-content: flex-start; width:20%;}
+.carousel-wrap li:not(:last-child) {width: 20%;}
+.carousel-wrap li .dot {display:flex; flex-direction: column; justify-content: center; min-width: 16px; }
+.carousel-wrap li .dot  p {opacity:0; visibility: hidden; transform: translate3d(0px, 10px, 10px); font-weight: 800; font-size: .88em; color: var(--light);}
+.carousel-wrap li .dot  p::after {opacity:0; content:""; display: inline-flex; color: var(--gray); margin-left: .5em; font-size: .75em; transform: translate3d(-15px, 0px, 11px); transition: transform .35s cubic-bezier(0,0,.25,1),-webkit-transform .35s cubic-bezier(0,0,.25,1);}
+.carousel-wrap li .column-line { opacity:0; visibility: hidden; transform: translate3d(0px, 0px, 12px) scale(1, 0); width: 1px; height: 1.04vw; min-height: 16px; background-color: var(--gray); margin-left: .3em;}
+.carousel-wrap li .dot a {opacity:.2; width:10px; height:10px; border-radius: 5vh;background-color: var(--light); transform: matrix(0.7, 0, 0, 0.7, 0, 0);}
+.carousel-wrap li .row-line {opacity:.2; position:absolute; bottom:.3em; right:100%; width:0vw; height:1px; background-color: var(--light); transition:width .35s cubic-bezier(0,0,.25,1); margin-right:.5vw;}
+.carousel-wrap li .row-line::after {content:""; opacity:.2; position:absolute; bottom:0; right:0; width:13vw; height:1px; background-color: var(--light); }
+
+/*.carousel li.active*/
+.carousel-wrap li.active:nth-child(1) p::after {content:"| home |";}
+.carousel-wrap li.active:nth-child(2) p::after {content:"| work |";}
+.carousel-wrap li.active:nth-child(3) p::after {content:"| animation |";}
+.carousel-wrap li.active:nth-child(4) p::after {content:"| ability |";}
+.carousel-wrap li.active:nth-child(5) p::after {content:"| about |";}
+.carousel-wrap li.active:nth-child(6) p::after {content:"| touch |";}
+.carousel-wrap li.active p {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 11px);}
+.carousel-wrap li.active p::after {opacity:1; transform: translate3d(0px, 0px, 12px);}
+.carousel-wrap li.active .column-line  {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 12px);}
+.carousel-wrap li.active .dot a{opacity:1; background-color: var(--primary-color); transform: matrix(1, 0, 0, 1, 0, 0);} 
+.carousel-wrap li.active .row-line {opacity:1; width:13vw;}
+
+@media screen and (max-width:559px){
+    .carousel-wrap li .dot  p::after {display:none;}
+}
+

@@ -1,54 +1,62 @@
 @charset "utf-8";
 
 /* layout*/
-.wrap {min-width:320px; width:100%; overflow:hidden;}
-.inner {display:flex; align-items:center; padding:0 6.25vw;}
-main {position:relative; width:100%; height:100vh;}
+.wrap {min-width:320px; width:100%;}
+.inner {display:flex; align-items:center; width:100%; height:100%; padding:0 6.25vw;  box-sizing: border-box;}
+.main {position:relative; width:100%; height:100%;}
+.section {position:relative; }
+.sticky {position: sticky;top: 0;width: 100%;height: 100vh; z-index: 2;}
+.sticky-wrapper {position:relative; z-index: 1;}
+.sticky-overflow{position: relative; z-index: 1; width: 100%; height: 100%;overflow: hidden;}
+.section-content{margin-left: auto; margin-right: auto; width: 980px;}
+
 
 /* header.main-gnb*/
-.main-gnb {position:fixed;  top: 6.48vh; left: 0; width: 100%;  z-index: 6;}
-.header-logo a {width:2.97vh; height:auto; }
+.main-gnb {position:-webkit-sticky; position:sticky;  top: 0; left: 0; width: 100%;  height: var( --localnav-height); padding-top:3.48vh; min-width:360px; background-color:  rgba(30,30,30,0.5);background-color:  rgba(30,30,30,0.5); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); z-index: 9997; }
+.header-wrap  {position:relative; }
+.header-logo  {align-self: flex-end;}
+.header-logo a {width:2.97vh; height:auto;}
 .header-wrap  nav{flex:1;}
 .header-wrap  nav  ul{display:flex;}
 .header-wrap  nav  ul li {font-weight: 400; font-size: .88em; margin-left:3.65vw;  padding: 1.85vh 1.04vw;}
 .header-wrap  nav  ul li a:hover , .action-button:hover {-webkit-transform:scale(1.2); transform:scale(1.2);}
 .header-wrap .action-button {font-weight: 600; font-size: .88em; }
 
+/*.section-hero */
+.section-hero {z-index: 2; display:block;}
+.section-hero .sticky-wrapper { height:150vh; top: calc( 0px - var(--localnav-height));}
+.section-hero .hero-content {position:relative; display:flex; justify-content:center; width:100%; }
+.section-hero h2 {display:flex; flex-direction:column; font-size: 100px; font-weight: 600; line-height: 1;  align-self: center; }
+.hero-manifesto {position: relative; z-index: 2;  padding: 140px 0 170px; }
 
-/* .paging */ 
-.paging {display:flex;position:fixed; top:30%; left: 6.25vw; height:4vh;  color: var(--light); font-size: 1em;}
-.paging .current-area {height:3vh; overflow: hidden; text-align: center;}
-.paging .current-area .currunt{width:100%; height:3vh; overflow: hidden; text-align: center;}
-.paging .total-area  {align-self: flex-end;}
-.paging  .stroke {-webkit-text-stroke: .05vw var(--gray); text-stroke: .05vw var(--gray); color: transparent;}
+/*.section-about*/
+.section-about {margin-top:-100vh; z-index: 2; }
+.section-about-wrap {position:relative; z-index: 1;}
+.about-content {position:absolute; width:100%; height:100vh; z-index:3; background-color: var(--dark); }
+
+/*.section-work */
+.section-work { }
+.section-work-wrap {position:relative; z-index: 4;}
+.work-content {position:absolute; width:100%; height:100vh;  background-color :pink;}
+.work-content .display {position: relative; width: 519px; height: 677px;  z-index: 2;  -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transform-origin: top center; transform-origin: top center; padding: 22px;}
+.work-content .display figure {background-repeat: no-repeat;
+    background-image: url(../images/display_hardware.png);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;}
 
 
-/*.carousel*/
-.carousel {position:fixed; bottom:6.02vh; left:0; width:100%; }
-.carousel-wrap li {position:relative; display:flex; align-items:center; justify-content: flex-start; width:20%;}
-.carousel-wrap li:not(:last-child) {width: 20%;}
-.carousel-wrap li .dot {display:flex; flex-direction: column; justify-content: center; min-width: 16px; }
-.carousel-wrap li .dot  p {opacity:0; visibility: hidden; transform: translate3d(0px, 10px, 10px); font-weight: 800; font-size: .88em; color: var(--light);}
-.carousel-wrap li .dot  p::after {opacity:0; content:""; display: inline-flex; color: var(--gray); margin-left: .5em; font-size: .75em; transform: translate3d(-15px, 0px, 11px); transition: transform .35s cubic-bezier(0,0,.25,1),-webkit-transform .35s cubic-bezier(0,0,.25,1);}
-.carousel-wrap li .column-line { opacity:0; visibility: hidden; transform: translate3d(0px, 0px, 12px) scale(1, 0); width: 1px; height: 1.04vw; min-height: 16px; background-color: var(--gray); margin-left: .3em;}
-.carousel-wrap li .dot a {opacity:.2; width:10px; height:10px; border-radius: 5vh;background-color: var(--light); transform: matrix(0.7, 0, 0, 0.7, 0, 0);}
-.carousel-wrap li .row-line {opacity:.2; position:absolute; bottom:.3em; right:100%; width:0vw; height:1px; background-color: var(--light); transition:width .35s cubic-bezier(0,0,.25,1); margin-right:.5vw;}
-.carousel-wrap li .row-line::after {content:""; opacity:.2; position:absolute; bottom:0; right:0; width:13vw; height:1px; background-color: var(--light); }
 
-/*.carousel li.active*/
-.carousel-wrap li.active:nth-child(1) p::after {content:"| home |";}
-.carousel-wrap li.active:nth-child(2) p::after {content:"| work |";}
-.carousel-wrap li.active:nth-child(3) p::after {content:"| animation |";}
-.carousel-wrap li.active:nth-child(4) p::after {content:"| ability |";}
-.carousel-wrap li.active:nth-child(5) p::after {content:"| about |";}
-.carousel-wrap li.active:nth-child(6) p::after {content:"| touch |";}
-.carousel-wrap li.active p {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 11px);}
-.carousel-wrap li.active p::after {opacity:1; transform: translate3d(0px, 0px, 12px);}
-.carousel-wrap li.active .column-line  {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 12px);}
-.carousel-wrap li.active .dot a{opacity:1; background-color: var(--primary-color); transform: matrix(1, 0, 0, 1, 0, 0);} 
-.carousel-wrap li.active .row-line {opacity:1; width:13vw;}
 
-@media screen and (max-width:559px){
-    .carousel-wrap li .dot  p::after {display:none;}
+
+
+@media only screen and (max-width: 1068px){
+.section-hero .sticky {
+    min-height: 520px;
 }
-
+}
