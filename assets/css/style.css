@@ -59,6 +59,6 @@
 
 @media only screen and (max-width: 568px){
     .section-hero .hero-headline {font-size: 56px;}
-    .action-button {font-size: 0;}
+    .header-wrap .action-button {font-size: 0;}
     .dot-one {transform:scale(1.5);}
     }
