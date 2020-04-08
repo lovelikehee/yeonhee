@@ -12,9 +12,10 @@
     --secondary-color: #5a2abd;
     --error-color: #932422; 
     --localnav-height: 52px;
+    --frame-thickness: 30px;
 }
 
-*{-webkit-font-smoothing:antialiased;font-smoothing:antialiased;}
+*{-webkit-font-smoothing:antialiased;font-smoothing:antialiased; box-sizing: border-box;}
 body{background-color: var(--dark); color:var(--light);font-size:14px; font-family: 'Mukta', sans-serif;  -webkit-box-sizing: border-box; box-sizing: border-box;}
 body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select{margin:0;padding:0; font-weight:normal;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,iframe,th,td{margin:0;padding:0;}
