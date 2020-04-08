@@ -47,14 +47,14 @@
 .fill-screen-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: auto 100.2%; background-position: left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg.jpg); }
 
 /* .section-work-triptych */
-.section-work-triptych .sticky {min-height: auto; max-height:780px; }
+.section-work-triptych .sticky {min-height: auto; max-height:1320px; }
 .triptych-content{position: relative; width: 100%; height: 100%; display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; background: var(--dark);} 
 .triptych-column {position: relative; width: calc(33.33% - var(--frame-thickness) * 2/3); height:100%; background:#000;}
 .triptych-image-container {position: relative; width: 100%; height: 100%; overflow: hidden; box-sizing: border-box;}
-.image-triptych-left {--image-y-parallax: 120px; width: 100%; height: calc( 100% + var(--image-y-parallax)); background-repeat: no-repeat; background-image: url(../images/megabox.gif);background-size: 100% auto;}
-.image-triptych-middle{--image-y-parallax: 160px; width:100%; height: calc( 100% + var(--image-y-parallax) * 2); background-repeat: no-repeat; background-image: url(../images/megabox.gif); width: 100%;height: 110%; margin-top: -10%; background-size: auto 100%; background-position: 50% 50%;}
+.image-triptych-left {--image-y-parallax: 120px; width: 100%; height: calc( 100% + var(--image-y-parallax)); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/55823683735321.5d4599b56161c.png);background-size: 100% auto;}
+.image-triptych-middle{--image-y-parallax: 160px; width:100%; height: calc( 100% + var(--image-y-parallax) * 2); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc8ac383735321.5d4599b5622d4.png); width: 100%;height: 110%; margin-top: -10%; background-size: auto 100%; background-position: 50% 50%;}
 .container-right {display: flex;align-items: center;justify-content: center;padding: 60px;}
-.image-triptych-right {--image-y-parallax: 80px; background-repeat: no-repeat; background-image: url(../images/megabox.gif); background-size: contain; background-position: 50% 50%; width: 100%;height: 100%;max-width: 265px;}
+.image-triptych-right {--image-y-parallax: 80px; background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc8ac383735321.5d4599b5622d4.png); background-size: contain; background-position: 50% 50%; width: 100%;height: 100%;max-width: 265px;}
 
 /*.section-work */
 .section-work { position:relative; z-index:1; margin-top:-100vh; height:100%; overflow:visible;}
@@ -70,7 +70,6 @@
 :root{--frame-thickness: 20px;}
 .sticky {min-height:840px}
 .section-hero .sticky {min-height: 520px;}
-.section-work-triptych .sticky  {max-height:600px;}
 .typography-hero-subhead { font-size: 4.5em;}
 .hero-copy {font-size: 28px; }
 .container-right {padding: 40px;}
