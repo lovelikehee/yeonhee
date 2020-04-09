@@ -14,7 +14,7 @@ $(function(e){
         var  headerH = $(".main-gnb").outerHeight();
         $(".section-hero .sticky-wrapper").css("top", -headerH);
         console.log(headerH);
-       },1000);
+       },300);
 
 
 
