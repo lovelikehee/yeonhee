@@ -13,8 +13,9 @@ $(function(e){
     setTimeout(function(){
         var  headerH = $(".main-gnb").outerHeight();
         $(".section-hero .sticky-wrapper").css("top", -headerH);
+        console.log(headerH);
        },3000);
-    console.log(headerH);
+
 
 
 
