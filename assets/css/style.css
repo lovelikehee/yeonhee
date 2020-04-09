@@ -12,12 +12,13 @@
 .row {display: flex; -ms-flex-wrap: wrap;flex-wrap: wrap;-ms-flex-direction: row;flex-direction: row; justify-content:center; width: 100%;}
 .typography {display:flex; flex-direction:column; justify-content: center; align-items: center;}
 .frame-wrap{padding: var(--frame-thickness);}
+.frame-row{padding:0 var(--frame-thickness);}
 .about-time-line {height:100vh;}
 .shadow {display: block;position: absolute;z-index: 1;top: 94%;width: 100%;height: calc(6% + 50vh);background: linear-gradient(to bottom,var(--dark) 0%, transparent 60%);pointer-events: none;}
 
 
 /* header.main-gnb*/
-.main-gnb {position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height: 100%; padding-top:3.48vh;min-width:360px;background-color: rgba(30,30,30,0.5);background-color: rgba(30,30,30,0.5); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); z-index: 9997;}
+.main-gnb {position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height: 100%; padding-top:3.48vh;background-color: rgba(30,30,30,0.5);background-color: rgba(30,30,30,0.5); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); z-index: 9997;}
 .header-wrap {position:relative;}
 .header-logo  {align-self: flex-end;}
 .header-logo a {width:2.97vh; height:auto;}
@@ -28,6 +29,7 @@
 .header-wrap .action-button {font-weight: 600; font-size: .88em; }
 
 /*.section-hero */
+.section-hero {z-index: 3;}
 .section-hero .sticky-wrapper {height:150vh; top: calc( 0px - var(--localnav-height)); background-color:var(--dark);}
 .section-hero .sticky {min-height: 920px;}
 .hero-content {position:relative; justify-content:center; width:100%; height:100vh; z-index:1; box-sizing:border-box;}
@@ -46,19 +48,23 @@
 .screm {z-index: 3; background: rgba(0,0,0,0.35);}
 .fill-screen-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: auto 100.2%; background-position: left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg.jpg); }
 
+
 /* .section-work-triptych */
-.section-work-triptych .sticky {min-height: auto; max-height:1320px; }
-.triptych-content{position: relative; width: 100%; height: 100%; display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; background: var(--dark);} 
+.section-about{z-index: 2;}
+.section-work-triptych .sticky{max-height: 780px; height: calc( 100vh - var(--localnav-height)); background: var(--dark); z-index: 2; padding: var(--frame-thickness) 0;}
+.triptych-content{position: relative; width: 100%; height: 100%; display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; } 
 .triptych-column {position: relative; width: calc(33.33% - var(--frame-thickness) * 2/3); height:100%; background:#000;}
+.triptych-column a{width:100%; height:100%;}
 .triptych-image-container {position: relative; width: 100%; height: 100%; overflow: hidden; box-sizing: border-box;}
-.image-triptych-left {--image-y-parallax: 120px; width: 100%; height: calc( 100% + var(--image-y-parallax)); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/55823683735321.5d4599b56161c.png);background-size: 100% auto;}
-.image-triptych-middle{--image-y-parallax: 160px; width:100%; height: calc( 100% + var(--image-y-parallax) * 2); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc8ac383735321.5d4599b5622d4.png); width: 100%;height: 110%; margin-top: -10%; background-size: auto 100%; background-position: 50% 50%;}
-.container-right {display: flex;align-items: center;justify-content: center;padding: 60px;}
-.image-triptych-right {--image-y-parallax: 80px; background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc8ac383735321.5d4599b5622d4.png); background-size: contain; background-position: 50% 50%; width: 100%;height: 100%;max-width: 265px;}
+.container-left{padding: 60px 0 0 60px;}
+.container-right {display: flex; align-items: center; justify-content: center; width: 100%; padding: 60px;}
+.image-triptych-left {--image-y-parallax: 120px; width: 100%; height: calc( 100% + var(--image-y-parallax)); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/68c76595083499.5e8ef0ddcb82b.png);background-size: 100% auto; background-size: 100% auto; background-position: top left;}
+.image-triptych-middle{--image-y-parallax: 160px; width:100%; height: calc( 100% + var(--image-y-parallax) * 2); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f4634d95078307.5e8ec020bfa7b.png);  background-size: auto 105%; background-position: center center;}
+.image-triptych-right {--image-y-parallax: 80px; background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35f1b195083499.5e8eeb579154b.png); background-size: contain; background-position: 50% 50%; width: 100%; height: 100%;}
 
 /*.section-work */
-.section-work { position:relative; z-index:1; margin-top:-100vh; height:100%; overflow:visible;}
-.work-wrap {height: calc(200vh - var(--frame-thickness)); min-height: 500px;}
+.section-work { position:relative; margin-top:-100vh; z-index:1; height:100%; overflow:visible;}
+.work-wrap { height: calc(200vh - var(--frame-thickness) - var(--frame-thickness)); min-height: 500px;}
 .work-content{display:flex; align-content: center; justify-content: left; position:absolute; top: initial; bottom: 0; left: 0;width: 100%; height: 40vh; border-top: var(--frame-thickness) solid #111; margin-bottom: var(--frame-thickness); z-index: 300; background:#000;  transition: transform 1s; overflow: hidden;}
 .work-typography { padding: calc( var(--frame-thickness) * 2) 0 calc( var(--frame-thickness) * 2) 10vw; color:#fff;}
 .work-gallery { --caption-frame-height: 50; position:relative; width: 100%; height:100%; background:#000; transition: transform 1s, -webkit-transform 1s;}
@@ -66,12 +72,20 @@
 .gallery-img {position:relative; width:100%; height:100%; background-color: #000; z-index:100;}
 
 /* media Query */
+@media only screen and (min-width: 1441px){
+    :root{ --frame-thickness: 40px;}
+ .section-work-triptych .sticky {max-height: 980px;}
+}
+
 @media only screen and (max-width: 1068px){
 :root{--frame-thickness: 20px;}
 .sticky {min-height:840px}
-.section-hero .sticky {min-height: 520px;}
+.section-work-triptych .sticky {max-height: 1320px; min-height:auto;}
 .typography-hero-subhead { font-size: 4.5em;}
 .hero-copy {font-size: 28px; }
+.triptych-column {position: relative; width: calc(50% - var(--frame-thickness) * 0.5);   height: calc(50% - var(--frame-thickness) * 0.5); }
+.triptych-column.column-right {position: relative; width: 100%; height: calc(50% - var(--frame-thickness) * 0.5); background:#000;}
+.container-left{padding: 40px 0 0 40px;}
 .container-right {padding: 40px;}
 .image-triptych-left {--image-y-parallax: 90px;}
 .image-triptych-middle {--image-y-parallax: 120px;}
@@ -81,7 +95,12 @@
 
 
 @media only screen and (max-width: 734px){
+    :root {--frame-thickness: 15px; --localnav-height: 48px; }
     .typography-hero-subhead { font-size: 40px;}
+    .section-work-triptych .sticky {max-height: 680px;}
+    .container-left{padding: 24px 0 0 24px;min-height: initial;}
+    .container-right {padding: 30px;}
+    .image-triptych-left {--image-y-parallax: 50px;}
     
   }
 
@@ -95,15 +114,3 @@
     }
 
 
-@media (max-aspect-ratio: 1/1){
-        .section-work-triptych .sticky  {max-height:1520px;}
-        .triptych-column {  width: calc(50% - var(--frame-thickness) * 0.5);   height: calc(50% - var(--frame-thickness) * 0.5);}
-        .column-right { width: 100%; height: calc(50% - var(--frame-thickness) * 0.5);}
-    } 
-
-    @media only screen and (max-aspect-ratio: 1/1) and (max-width: 1068px){
-        .section-work-triptych .sticky  {max-height:1320px;}
-    }
-
-
-  
