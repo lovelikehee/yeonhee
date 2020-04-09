@@ -1,7 +1,6 @@
 $(function(e){
     e.preventDefalut;
-    let dot = $(".carousel").find("li"),
-          headerH = $(".main-gnb").outerHeight();
+    let dot = $(".carousel").find("li");
 
     dot.click(function(){
         dot.removeClass("active")
