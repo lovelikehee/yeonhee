@@ -9,7 +9,7 @@ $(function(e){
         $(".dot").find("p, .column-line, .row-line").addClass("transform");
     });
           
- 
+ //header 값 구하기 
     setTimeout(function(){
         var  headerH = $(".main-gnb").outerHeight();
         $(".section-hero .sticky-wrapper").css("top", -headerH);
