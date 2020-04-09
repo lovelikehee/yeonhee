@@ -10,8 +10,10 @@ $(function(e){
         $(".dot").find("p, .column-line, .row-line").addClass("transform");
     });
           
-    
-    $(".section-hero .sticky-wrapper").css("top", -headerH);
+ 
+    setTimeout(function(){
+        $(".section-hero .sticky-wrapper").css("top", -headerH);
+       },1000);
     console.log(headerH);
 
 

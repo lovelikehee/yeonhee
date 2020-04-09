@@ -30,7 +30,7 @@
 
 /*.section-hero */
 .section-hero {z-index: 3;}
-.section-hero .sticky-wrapper {height:150vh; top: calc( 0px - var(--localnav-height)); background-color:var(--dark);}
+.section-hero .sticky-wrapper {height:150vh; top:0; background-color:var(--dark);}
 .section-hero .sticky {min-height: 920px;}
 .hero-content {position:relative; justify-content:center; width:100%; height:100vh; z-index:1; box-sizing:border-box;}
 .hero-headline {display:flex; flex-direction:column; font-size: 7.5em; font-weight:600; line-height:1;}
