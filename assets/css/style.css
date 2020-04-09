@@ -24,7 +24,7 @@
 .header-logo a {width:2.97vh; height:auto;}
 .header-wrap  nav {flex:1;}
 .header-wrap  nav  ul {display:flex;}
-.header-wrap  nav  ul li {font-weight:400;font-size: .88em;margin-left:3.65vw;padding: 1.85vh 1.04vw;}
+.header-wrap  nav  ul li {font-weight:400;font-size: .88em;margin-left:3.65vw; padding: 1.85vh 1.04vw;}
 .header-wrap  nav  ul li a:hover , .action-button:hover {-webkit-transform:scale(1.2); transform:scale(1.2);}
 .header-wrap .action-button {font-weight: 600; font-size: .88em; }
 
