@@ -1,7 +1,7 @@
 $(function(e){
     e.preventDefalut;
     let dot = $(".carousel").find("li"),
-          headerH =   $(".main-gnb").outerHeight();
+          headerH = $(".main-gnb").outerHeight();
 
     dot.click(function(){
         dot.removeClass("active")
@@ -10,7 +10,7 @@ $(function(e){
         $(".dot").find("p, .column-line, .row-line").addClass("transform");
     });
           
-      
+    
     $(".section-hero .sticky-wrapper").css("top", -headerH);
     console.log(headerH);
 
