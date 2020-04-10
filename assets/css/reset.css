@@ -69,13 +69,6 @@ transition: opacity .25s cubic-bezier(.25,.25,.75,.75);
 }
 
 
-/* .paging */ 
-.paging {display:flex;position:sticky;  top:30%; left: 6.25vw; height:4vh;  color: var(--light); font-size: 1em;}
-.paging .current-area {height:3vh; overflow: hidden; text-align: center;}
-.paging .current-area .currunt{width:100%; height:3vh; overflow: hidden; text-align: center;}
-.paging .total-area  {align-self: flex-end;}
-.paging  .stroke {-webkit-text-stroke: .05vw var(--gray); text-stroke: .05vw var(--gray); color: transparent;}
-
 
 /*.carousel*/
 .carousel {position:-webkit-sticky; position:sticky;  bottom:6.02vh; left:0; width:100%; z-index: 9999;}
