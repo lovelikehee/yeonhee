@@ -123,7 +123,7 @@
 .circle-items {flex-direction:column; align-items: stretch;}
 .circle-left {display: flex; justify-content: center; align-items: flex-end;  flex:1; height: 100%;}
 .paging {top: 20%; left: 4.4vw;height: 3vh;}
-
+}
 
 @media only screen and (max-width: 734px){
     :root {--frame-thickness: 15px; --localnav-height: 48px; }
@@ -141,6 +141,7 @@
     .hero-copy {font-size: 18px; }
     .header-wrap .action-button {font-size: 0;}
     .dot-one {transform:scale(1.5);}
+    .hero-manifesto {padding-top:0;}
 
     }
 
