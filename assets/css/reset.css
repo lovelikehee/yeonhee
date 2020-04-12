@@ -40,20 +40,24 @@ strong{font-weight:normal}
 /* none */
 .hidden {display:none;}
 .blind, legend {position:absolute; clip:rect(1px, 1px, 1px, 1px); clip-path: inset(0px 0px 99.9% 99.9%); overflow:hidden; height:1px; width:1px; padding: 0; border:0; top:50%;}
+.m-only {display:none;}
+.pc-only{display:block;}
 
 /* style */
 svg {width:100%; height:100%;}
-.dot-one , .dot-four {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center;-ms-flex-align: center;align-items: center}
-.dot-one:before,.dot-four:before {line-height: 0;margin-top: 1px}
-.dot-one:before {content: url(../images/dot-one.svg); width: 5px; height: 5px; margin-right: .52vw}
-@media only screen and (max-width: 560px) { .dot-one:before {margin-right:7px }}
+.dot-one , .dot-four, .dot-two {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center;-ms-flex-align: center;align-items: center}
+.dot-one::before,.dot-four::before,.dot-two::after {line-height: 0;margin-top: 1px;}
+.dot-one::before {content: url(../images/dot-one.svg); width: 5px; height: 5px; margin-right: .52vw;}
+.dot-two::after {content: url(../images/dot-one.svg); width: 5px; height: 5px; margin-left: .52vw;}
+@media only screen and (max-width: 560px) { .dot-one::before {margin-right:7px;}
+@media only screen and (max-width: 560px) { .dot-two::after {margin-left:7px;}
 .dot-four:before {content: url(../images/dot-four.svg);width: .85em;margin-right: .7em}
 
 header > div , header  > div nav , header >div nav ul li a , .action-button{
     -webkit-transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
     transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
     transition: transform .25s cubic-bezier(0,0,.25,1);
-    transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1)
+    transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1);
 }
 
 .opacity {
@@ -70,32 +74,6 @@ transition: opacity .25s cubic-bezier(.25,.25,.75,.75);
 
 
 
-/*.carousel*/
-.carousel {position:-webkit-sticky; position:sticky;  bottom:6.02vh; left:0; width:100%; z-index: 9999;}
-.carousel-wrap li {position:relative; display:flex; align-items:center; justify-content: flex-start; width:20%;}
-.carousel-wrap li:not(:last-child) {width: 20%;}
-.carousel-wrap li .dot {display:flex; flex-direction: column; justify-content: center; min-width: 16px; }
-.carousel-wrap li .dot  p {opacity:0; visibility: hidden; transform: translate3d(0px, 10px, 10px); font-weight: 800; font-size: .88em; color: var(--light);}
-.carousel-wrap li .dot  p::after {opacity:0; content:""; display: inline-flex; color: var(--gray); margin-left: .5em; font-size: .75em; transform: translate3d(-15px, 0px, 11px); transition: transform .35s cubic-bezier(0,0,.25,1),-webkit-transform .35s cubic-bezier(0,0,.25,1);}
-.carousel-wrap li .column-line { opacity:0; visibility: hidden; transform: translate3d(0px, 0px, 12px) scale(1, 0); width: 1px; height: 1.04vw; min-height: 16px; background-color: var(--gray); margin-left: .3em;}
-.carousel-wrap li .dot a {opacity:.2; width:10px; height:10px; border-radius: 5vh;background-color: var(--light); transform: matrix(0.7, 0, 0, 0.7, 0, 0);}
-.carousel-wrap li .row-line {opacity:.2; position:absolute; bottom:.3em; right:100%; width:0vw; height:1px; background-color: var(--light); transition:width .35s cubic-bezier(0,0,.25,1); margin-right:.5vw;}
-.carousel-wrap li .row-line::after {content:""; opacity:.2; position:absolute; bottom:0; right:0; width:13vw; height:1px; background-color: var(--light); }
 
-/*.carousel li.active*/
-.carousel-wrap li.active:nth-child(1) p::after {content:"| home |";}
-.carousel-wrap li.active:nth-child(2) p::after {content:"| work |";}
-.carousel-wrap li.active:nth-child(3) p::after {content:"| animation |";}
-.carousel-wrap li.active:nth-child(4) p::after {content:"| ability |";}
-.carousel-wrap li.active:nth-child(5) p::after {content:"| about |";}
-.carousel-wrap li.active:nth-child(6) p::after {content:"| touch |";}
-.carousel-wrap li.active p {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 11px);}
-.carousel-wrap li.active p::after {opacity:1; transform: translate3d(0px, 0px, 12px);}
-.carousel-wrap li.active .column-line  {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 12px);}
-.carousel-wrap li.active .dot a{opacity:1; background-color: var(--primary-color); transform: matrix(1, 0, 0, 1, 0, 0);} 
-.carousel-wrap li.active .row-line {opacity:1; width:13vw;}
 
-@media screen and (max-width:559px){
-    .carousel-wrap li .dot  p::after {display:none;}
-}
-
+}}

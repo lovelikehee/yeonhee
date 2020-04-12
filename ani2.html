@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			height: 100vh;
+    		margin: 0 auto;
+	background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+.circle-wrap {
+	width: 100vw; height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.circle {
+	position: relative;
+	width: 100px; height: 100px; margin: 75px;
+	animation: rotating 1s linear infinite;
+}
+
+.circle:before {
+	content:''; display: block;
+	width: 40px; height: 40px;
+	position: absolute; left: 0; top: 0;
+	background-color: #f5576c;
+	border-radius: 50%;
+	box-shadow: 60px 60px 0 #f5576c; 
+	animation: center 2s ease-in-out infinite;
+	mix-blend-mode:  multiply;
+}
+.circle:after {
+	content:''; display: block;
+	width: 40px; height: 40px;
+	position: absolute; top: 0; left: calc(100% - 40%);
+	background-color: #fa709a;
+	border-radius: 50%;
+	box-shadow: -60px 60px 0 #fa709a; 
+	animation: center 2s ease-in-out infinite;
+	mix-blend-mode:  multiply;
+}
+
+@keyframes rotating {
+	0%   {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+@keyframes center {
+	50% {
+		top: calc(50% - (40px / 2));
+		left: calc(50% - (40px / 2));
+		box-shadow: 0 0 0 rgba(240,38,65,0.2);
+		background-color: rgba(240,38,65,0.6);
+	}
+}
+		
+	</style>
+</head>
+<body>
+	<div class="circle-wrap">
+	<div class="circle"></div>
+</div>
+</body>
+</html>
