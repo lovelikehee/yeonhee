@@ -32,26 +32,12 @@
 .section-hero .sticky-wrapper {top:0; height:150vh;}
 .section-hero .sticky {min-height: 920px;}
 .hero-content {position:relative; justify-content:center; width:100%; height:100vh; z-index:1;}
-.hero-headline {display:flex; justify-content:center; align-items:center; font-size: 7.5em; font-weight:600; line-height:1; }
-.hero-headline svg{width:50vw; height:50vw;}
+.hero-headline {display:flex; justify-content:center; align-items:center;font-weight:600; line-height:1; }
+.hero-headline svg {width:50%; font-size:10vw; }
+.hero-headline svg .svgText{ stroke: #fff; stroke-width: 1px; fill: none; opacity: 0; animation: stroke 5s 1 forwards;}
 .hero-manifesto {position: relative; align-self:flex-start; z-index:2;  padding:100px 0 200px 0;  margin-top: -50vh; background:-webkit-linear-gradient(rgba(0,0,0,0) , rgba(30,30,30,1),rgba(30,30,30,1)); background:linear-gradient(rgba(0,0,0,0) , rgba(30,30,30,1),rgba(30,30,30,1));}
-.typography-hero-subhead {font-size: 7.5em; font-weight: 600; letter-spacing: -.01em;}
-.hero-copy {font-size: 32px; text-align:center; white-space:pre-line; padding:45px 5vh 50px;}
-.svgText {stroke: #fff; stroke-width: 1px; fill: none; opacity: 0;animation: stroke 5s 1 forwards;}
-
-@keyframes stroke {
-  0%   {
-      stroke-dashoffset: 25%;
-      stroke-dasharray: 0 50%; 
-      opacity: 0;
-  }
-  100% {
-      stroke-dashoffset: -25%;
-      stroke-dasharray: 50% 0;
-      opacity: 1;
-  }
-}
-
+.typography-hero-subhead {font-size: 7.5em; font-weight: 600; line-height:100%; letter-spacing: -.01em;}
+.hero-copy {font-size: 32px; text-align:center; line-height:1.6; white-space:pre-line; padding:45px 5vh 50px;}
 
 
 /*.section-about*/
@@ -96,14 +82,14 @@
 .ability-wrap {display:flex;display:flex; align-items: center; width:100%; height:100%;}
 .ability-content {display:flex; align-items: center;  justify-content: space-between; position:relative; width: 100%;height:100%;}
 .circle-items.standard {position:relative; display:flex; justify-content: space-between;align-items: center; width:100%; height:100%; margin-left:0%;}
-.circle-items {display:flex; justify-content: space-between;align-items: center; position:absolute; top:0; left:0; width:100%; height:100%; margin-left:110%;}
+.circle-items {display:flex; justify-content: space-between;align-items: center; position:absolute; top:0; left:0; width:100%; height:100%; margin-left:115%;}
 .circle-left {flex:0 0 calc(50% - 35px); display:flex; justify-content: center;}
 .circle-left .circle-copy{display:flex;}
 .circle-left .circle-copy .circle-eyebrow{font-weight:400;font-size: 2em;}
 .circle-left .circle-copy .circle-headline{font-size: 5em; font-weight: 600; margin-left: 2vw; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,1);}
 .circle-right {flex:0 0 50%; height:50vh; overflow: hidden; cursor: pointer; border:1px solid #fff;} 
 .circle-content {position:relative; width:100%; height:100%;}
-.circle-content .explain{display: flex; justify-content: center; align-items: flex-end; padding: 40px 100px;width:100%; height:100%; background:#000; font-size: 14px; opacity: .2;  text-align:center; transition:all 0.5s cubic-bezier(.215,.61,.355,1);}
+.circle-content .explain{display: flex; justify-content: center; align-items: flex-end; padding: 40px 100px;width:100%; height:100%; background:#000; font-size: 14px; line-height:1.6; opacity: .2;  text-align:center; transition:all 0.5s cubic-bezier(.215,.61,.355,1);}
 .circle-content:hover .explain { align-items: center;opacity: .9;}
 .ani1 {position:absolute; top:0; left:0; width:100%; height:50vh;}
 .arrow {display: inline-flex; justify-content: space-between; padding:0  5vw; align-items: center; height: 100%;position:absolute;  top:0; right:0; color:#fff; }
@@ -145,14 +131,12 @@
 .carousel-wrap li.active .dot a{opacity:1; background-color: var(--primary-color); transform: matrix(1, 0, 0, 1, 0, 0);} 
 .carousel-wrap li.active .row-line {opacity:1; width:13vw;}
 
-@media screen and(max-width:559px) {
-    .carousel-wrap li .dot  p::after {display:none;}
-}
 
 /* media Query */
 @media only screen and (min-width: 1441px){
     :root{ --frame-thickness: 40px;}
  .section-work-triptych .sticky {max-height: 980px;}
+ .hero-headline svg {width:50%; font-size:9vw; }
 }
 
 @media only screen and (max-width: 1068px){
@@ -173,16 +157,16 @@
 .work-copy {font-size: 24px; }
 .ability-wrap{height:auto;}
 .ability-content {height:auto;}
-.circle-items {flex-direction:column; align-items: stretch;}
-.circle-left {display: flex; justify-content: center; align-items: flex-end;  flex:1; height: 100%;}
-.circle-content .explain {padding:3.75vw 14.98vw;}
+.circle-items {flex-direction:column; align-items: stretch;height: auto;}
+.circle-left {display: flex; justify-content: center; padding-bottom:40px;}
+.circle-content .explain {font-size: 18px; padding:3.75vw 14.98vw;}
 .paging {top: 20%; left: 4.4vw;height: 3vh;}
 .arrow {display: flex; justify-content: space-between; padding:0  5vw; align-items: center; height: 100%;position:absolute;  top:6vw; color:#fff; }
 }
 
 @media only screen and (max-width: 734px){
     :root {--frame-thickness: 15px; --localnav-height: 48px; }
-    .typography-hero-subhead { font-size: 40px;}
+    .typography-hero-subhead {font-size: 60px;font-weight: 800;}
     .section-work-triptych .sticky {max-height: 680px;}
     .container-left{padding: 24px 0 0 24px;min-height: initial;}
     .container-right {padding: 30px;}
@@ -194,14 +178,23 @@
 
 @media only screen and (max-width: 568px){
   .m-only {display:block;} .pc-only{display:none;}
-  .section-hero .hero-headline {font-size: 56px;}
-  .typography-hero-subhead { font-size: 26px;}
-  .hero-copy {font-size: 18px; }
-  .header-wrap .action-button {font-size: 0;}
   .dot-one {transform:scale(1.5);}
-  .hero-manifesto {padding-top:0;}
+  .header-logo {align-self: center;}
+  .header-wrap .action-button { transform: scale(1);}
+  .header-wrap .action-button .Scroll {padding-top:3px;}
+  .hero-headline svg {width:80%; font-size:18.5vw; }
+  .hero-headline svg .svgText:nth-child(2){transform:translateY(-10%);}
+  .hero-manifesto {padding:30px 6.25vw 0; margin-top: -60vh; text-align: center; font-size: 50px;}
+  .hero-manifesto .typography-hero-subhead {padding-top:30px;}
+  .hero-copy {font-size: 18px; ;padding: 45px 0 35vw;}
   .work-copy{font-size: 10px;}
   .work-copy {padding: 20px 0 0 50px;}
   .work-copy > li a {line-height:100%; padding-top:3vw; }
+
+    }
+
+    @media only screen and (max-width: 376px){
+      .hero-manifesto {margin-top: -65vh;}
+      .hero-manifesto .typography-hero-subhead {padding-top:0;}
 
     }
