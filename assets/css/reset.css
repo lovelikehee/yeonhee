@@ -33,7 +33,7 @@ input, textarea, select{letter-spacing:normal;}
 button {border:0; background:none; cursor:pointer; -webkit-appearance:none;}
 ::-webkit-input-placeholder {color:#555;}
 input[type="text"],input[type="password"],input[type="time"],input[type="date"],input[type="email"],input[type="tel"],input[type="number"],input[type="file"],input[type="radio"],input[type="search"]{width:100%; vertical-align:middle; color:#000; box-sizing:border-box; border:1px solid #000; -webkit-appearance:none;}
-strong{font-weight:normal}
+strong{font-weight:normal} input:focus {outline:none;} textarea:focus{outline:none;}
 ::-moz-selection {background-color: var(--primary-color);color: var(--light)}
 ::selection {background-color: var(--primary-color); color: var(--light)}
 
@@ -58,6 +58,7 @@ header > div , header  > div nav , header >div nav ul li a , .action-button{
     transition: transform .25s cubic-bezier(0,0,.25,1);
     transition: transform .25s cubic-bezier(0,0,.25,1),-webkit-transform .25s cubic-bezier(0,0,.25,1);
 }
+
 .opacity { -webkit-transition: opacity .25s cubic-bezier(.25,.25,.75,.75); transition: opacity .25s cubic-bezier(.25,.25,.75,.75);}
 .transform { -webkit-transition: -webkit-transform .25s cubic-bezier(0,0,.25,1); transition: -webkit-transform .25s cubic-bezier(0,0,.25,1);
     transition: transform .25s cubic-bezier(0,0,.25,1); transition: transform .25s cubic-bezier(0,0,.25,1)-webkit-transform .25s cubic-bezier(0,0,.25,1);}

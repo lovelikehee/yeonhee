@@ -8,7 +8,7 @@ let height = window.innerHeight;
 let carousel = $(".carousel-wrap li"); 
 let circle = $(".circle-items");
 
-//scrollTop value
+    //scrollTop value
     $(window).scroll(function(){
         let Scroll = $(window).scrollTop();          
         $(".Scroll").text(Scroll);
@@ -28,8 +28,6 @@ let circle = $(".circle-items");
         console.log(headerH);
     },300);
 
-    let svgW = $(".svgText").outerWidth();
-    console.log(svgW);
 
     //carousel click motion
     carousel.click(function(){
@@ -52,6 +50,14 @@ let circle = $(".circle-items");
     //             }
     //             console.log(index);
     //          },1000);
+
+
+
+    //label 
+    
+
+
+
 
 
     });

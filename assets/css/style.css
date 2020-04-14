@@ -118,13 +118,15 @@
 .contact-input input {width: 100%;max-width: 27.86vw;color: var(--light); text-overflow: ellipsis;font-size: 3em;line-height: 2.11;}
 .contact-items {position:relative; width:100%;}
 .contact-items:nth-child(n+2) {margin-top:6.11vh;}
-.label-text {position: absolute; top: 0;left: 0;width: 100%;color: transparent;text-overflow: ellipsis; -webkit-transform-origin: left top; transform-origin: left top;-webkit-text-stroke: .05vw var(--gray);text-stroke: .05vw var(--gray); font-weight: 700;font-size: 4em; line-height: 1.13;}
+.label-text {position: absolute; top: 0;left: 0;width: 100%;color: transparent;text-overflow: ellipsis; -webkit-transform-origin: left top; transform-origin: left top;-webkit-text-stroke: .05vw var(--gray);text-stroke: .05vw var(--gray); font-weight: 700;font-size: 3em; line-height: 2.12;}
 .message-content{width: 100%; max-width: 27.86vw; color: var(--light); text-overflow: ellipsis; font-size: 1.5em; line-height: 1.3; margin-top: 2.41vh;padding-bottom: 2.41vh; overflow: hidden;resize: none;}
 .contact-button { font-size: 5.5em; font-weight: 700;color: transparent; -webkit-text-stroke: .05vw var(--light); text-stroke: .05vw var(--light); margin-top: 10vh;}
 .contact-button .point {letter-spacing:-.2em; -webkit-text-stroke: .05vw var( --primary-color); text-stroke: .05vw var( --primary-color); cursor:pointer; -webkit-transition: color .25s cubic-bezier(0,0,.25,1);transition: color .25s cubic-bezier(0,0,.25,1);}
 .contact-button:hover {color:var(--light);}
 .contact-button:hover span {color: var( --primary-color); }
-.line {height: 1px; background-color: var(--light);}
+.line.opacity {height: 1px; background-color: var(--light); opacity:.9;}
+.contact-input:hover .line.opacity {opacity:.3;}
+.contact-items.active  .label-text{  color: var(--gray);-webkit-transform: scale(.25) translateY(-85%)!important;transform: scale(.25) translateY(-85%)!important;-webkit-text-stroke-width: 0;text-stroke-width: 0;font-weight: 400;}
 
 
 /* media Query */
@@ -173,6 +175,8 @@
     .work-copy{font-size: 16px;}
     .circle-content .explain {font-size:12px; padding:3.75vw 15.5vw;}
     .contact-content{flex-direction:column;}
+    .contact-input input {max-width: 100%;}
+    .label-text {-webkit-text-stroke: 1px var(--gray);text-stroke: 1px var(--gray);}
     .myself {display: none;}
     .contact {flex:1; width:100%;}
 
@@ -193,6 +197,7 @@
   .work-copy{font-size: 10px;}
   .work-copy {padding: 20px 0 0 50px;}
   .work-copy > li a {line-height:100%; padding-top:3vw; }
+  .contact-button {font-size: 4.5em;}
 
     }
 
