@@ -323,29 +323,29 @@
                                         </div>
                                     </div>
                                     <div class="contact">
-                                        <form action="https://formspree.io/xrgaovqg"  method="POST">
+                                        <form id="form" action="https://formspree.io/xrgaovqg"  method="POST">
                                             <fieldset>
                                                 <legend>mail send</legend>
                                                 <div class="contact-items">
                                                     <div class="contact-input">
-                                                        <input type="text" name="name">
+                                                        <input id="uName" class="input" type="text" name="name" >
                                                         <div class="line opacity"></div>
                                                     </div>
-                                                    <label for="name" class="label-text transform"><span>Name</span></label>
+                                                    <label for="name" class="label-text transform" ><span>Name</span></label>
                                                </div>
                                                <div class="contact-items">
                                                     <div class="contact-input">
-                                                        <input class="input" type="email" name="_replyto">
+                                                        <input id="uMail" class="input" type="email" name="_replyto">
                                                         <div class="line opacity"></div>
                                                     </div>
-                                                    <label for="email"class="label-text"><span>email</span> </label>
+                                                    <label for="email"class="label-text transform"><span>Email</span> </label>
                                             </div>
                                             <div class="contact-items">
                                                 <div class="contact-input">
-                                                    <textarea class="message-content" name="message" rows="1"></textarea>
+                                                    <textarea id="uMemo" class="input transform message-content" name="message" rows="1"></textarea>
                                                     <div class="line opacity"></div>
                                                 </div>
-                                                <label for="message"><span class="label-text">message</span> </label>
+                                                <label for="message" class="label-text"><span>Message</span> </label>
                                             </div>                                           
                                                 <!-- your other form fields go here -->
                                             <button class="contact-button"type="submit">Send<span class="point">-></span></button>
