@@ -64,6 +64,7 @@ header > div , header  > div nav , header >div nav ul li a , .action-button{
     transition: transform .25s cubic-bezier(0,0,.25,1); transition: transform .25s cubic-bezier(0,0,.25,1)-webkit-transform .25s cubic-bezier(0,0,.25,1);}
 /*.carousel*/
 .carousel {position:-webkit-sticky; position:sticky;  bottom:6.02vh; left:0; width:100%; z-index: 9999;}
+.carousel.carousel-wrap {padding:0 6.25vw 0 12.5vw;}
 .carousel-wrap li {position:relative; display:flex; align-items:center; justify-content: flex-start; width:20%;}
 .carousel-wrap li:not(:last-child) {width: 20%;}
 .carousel-wrap li .dot {display:flex; flex-direction: column; justify-content: center; min-width: 16px; }
@@ -78,7 +79,7 @@ header > div , header  > div nav , header >div nav ul li a , .action-button{
 .carousel-wrap li.active:nth-child(1) p::after {content:"| home |";}
 .carousel-wrap li.active:nth-child(2) p::after {content:"| about |";}
 .carousel-wrap li.active:nth-child(3) p::after {content:"| work |";}
-.carousel-wrap li.active:nth-child(4) p::after {content:"| ability |";}
+.carousel-wrap li.active:nth-child(4) p::after {content:"| Ani |";}
 .carousel-wrap li.active:nth-child(5) p::after {content:"| touch |";}
 .carousel-wrap li.active:nth-child(6) p::after {content:"| end |";}
 .carousel-wrap li.active p {opacity:1; visibility:inherit; transform: translate3d(0px, 0px, 11px);}

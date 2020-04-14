@@ -20,16 +20,17 @@ $(function (e) {
         let offset1 = (Scroll - $(".column-right").offset().top) * 0.07;
         let offset2 = (Scroll - $(".triptych-column").offset().top) /1000;
         let offset3 = (Scroll - $(".section-about").offset().top) *0.18;
-        //.ability
-        $(".about-display").css({
-            "transform": "scale("+ -offset2 +") translateY(" + offset3+"px)"
-       
-        });
+        let offset4 = (Scroll - $(".ability-content").offset().top) *0.05;
 
+        //.about
+        $(".about-display").css({"transform": "scale("+ -offset2 +") translateY(" + offset3+"px)"});
         //.triptych-column Scroll
         $(".triptych-column .triptych-image-container  figure").css({ "transform": "translateY(" + -offset + "px)"});
         $(".gallery-img-all").css({"transform": "translateY(" + -(offset1-60) + "px)" });
         $(".work-typography").css({ "transform": "translateY(" + -(offset1-50) + "px)"});
+        //.section-ability
+        $(".rect-left").css({ "transform": "translateY(" + offset4 + "px)"});
+        $(".rect-right").css({ "transform": "translateY(" + -offset4 + "px)"});
 
     });
 
