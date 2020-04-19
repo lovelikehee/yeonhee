@@ -72,7 +72,7 @@ header > div , header  > div nav , header >div nav ul li a , .action-scroll{
 .carousel-wrap li .dot  p {opacity:0; visibility: hidden; transform: translate3d(0px, 10px, 10px); font-weight: 800; font-size: .88em; color: var(--light);}
 .carousel-wrap li .dot  p::after {opacity:0; content:""; display: inline-flex; color: var(--gray); margin-left: .5em; font-size: .75em; transform: translate3d(-15px, 0px, 11px); transition: transform .35s cubic-bezier(0,0,.25,1),-webkit-transform .35s cubic-bezier(0,0,.25,1);}
 .carousel-wrap li .column-line { opacity:0; visibility: hidden; transform: translate3d(0px, 0px, 12px) scale(1, 0); width: 1px; height: 1.04vw; min-height: 16px; background-color: var(--gray); margin-left: .3em;}
-.carousel-wrap li .dot a {opacity:.2; width:10px; height:10px; border-radius: 5vh;background-color: var(--light); transform: matrix(0.7, 0, 0, 0.7, 0, 0);}
+.carousel-wrap li .dot button {opacity:.2; width:10px; height:10px; border-radius: 5vh;background-color: var(--light); transform: matrix(0.7, 0, 0, 0.7, 0, 0);}
 .carousel-wrap li .row-line {opacity:.2; position:absolute; bottom:.3em; right:100%; width:0vw; height:1px; background-color: var(--light); transition:width .35s cubic-bezier(0,0,.25,1); margin-right:.5vw;}
 .carousel-wrap li .row-line::after {content:""; opacity:.2; position:absolute; bottom:0; right:0; width:13vw; height:1px; background-color: var(--light); }
 
