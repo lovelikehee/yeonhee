@@ -36,6 +36,7 @@ input[type="text"],input[type="password"],input[type="time"],input[type="date"],
 strong{font-weight:normal} input:focus {outline:none;} textarea:focus{outline:none;}
 ::-moz-selection {background-color: var(--primary-color);color: var(--light)}
 ::selection {background-color: var(--primary-color); color: var(--light)}
+iframe {border:none;}
 
 /* none */
 .hidden {display:none;}
