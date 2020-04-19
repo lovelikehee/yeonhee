@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="assets/js/script.js"></script>
 </head>
 <body>
@@ -118,7 +119,7 @@
                     </a>
                 </h1>
                 <nav lang="ko-KR" aria-label="메인네비게이션">
-                    <ul role="menubar">
+                    <ul role="menubar" class="navlist">
                         <li role="menuitem"><a class="dot-four" href="#work-triptych" target="_self" title="work">works</a></li>
                         <li role="menuitem"><a href="#about" target="_self" title="about">about</a></li>
                         <li role="menuitem"><a href="#contact" target="_self" title="contact">contacts</a></li>
@@ -243,8 +244,7 @@
                                 <div class="gallery-content">
                                     <div class="gallery-img">
                                         <figure class="gallery-img-all" aria-label="gallery" tabindex="0">
-                                            <img class="blind" src="assets/images/quicklook_placeholder.jpg" alt="mockup3개모음">
-                                            <figcaption class="blind" >mockup3개모음이미지</figcaption>
+                                            <a href="https://lovelikehee.github.io/portfolio" target="_blank" title="megabox"><span class="blind">다른포트폴리오사이트바로가기</span></a>
                                         </figure>
                                     </div>
                                 </div>
@@ -262,7 +262,7 @@
                                 <div class="paging">
                                     <div class="current-area">
                                         <ul class="current">
-                                            <li  title = "1">01</li>
+                                            <li title ="1">01</li>
                                             <li title = "2">02</li>
                                             <li title = "3">03</li>
                                         </ul>
@@ -297,7 +297,7 @@
                                             <div class="rect-content">
                                                 <iframe class="ani1" src="ani2.html" title="CSSAnimation" role="document"></iframe>
                                                 <div class="explain">
-                                                    <p>이 우주선은 GSAP의 TweenMax를 이용한 애니메이션입니다. TweenMax 기능 중 TimelineMax 기능을 이용하여 우주선이 자연스럽게 이동하도록 만들었으며  translateY , sclae ,ease 효과를 통해 사실처럼 움직이는 애니메이션을 완성하였습니다.</p>
+                                                    <p> gradient, opacity를 이용하여 입체감을 살리고 Transform과 keyframes을 이용하여 원형이 움직이는 효과를 나타내었습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -361,6 +361,7 @@
                                                         <div class="line opacity"></div>
                                                     </div>
                                                     <label for="uMail" class="label-text transform"><span>Email</span> </label>
+                                                    <p class="caution"></p>
                                             </div>
                                             <div class="contact-items">
                                                 <div class="contact-input">
@@ -368,6 +369,7 @@
                                                     <div class="line opacity"></div>
                                                 </div>
                                                 <label for="uMemo" class="label-text"><span>Message</span> </label>
+                                                <p class="caution"></p>
                                             </div>                                           
                                             <button class="contact-button" type="submit">Send<span class="point">-></span></button>
                                             </fieldset>
@@ -385,14 +387,14 @@
                         <div class="dot">
                             <p>01</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">home section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">home section으로 바로가는버튼</span></div>
                         </div>
                     </li>
                     <li>
                         <div class="dot">
                             <p>02</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">about section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">about section으로 바로가는버튼</span></div>
                         </div>
                         <div class="row-line"></div>
                     </li>
@@ -400,7 +402,7 @@
                         <div class="dot">
                             <p>03</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">work section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">work section으로 바로가는버튼</span></div>
                         </div>
                         <div class="row-line"></div>
                     </li>
@@ -408,7 +410,7 @@
                         <div class="dot">
                             <p>04</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">ani section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">ani section으로 바로가는버튼</span></div>
                         </div>
                         <div class="row-line"></div>
                     </li>
@@ -416,7 +418,7 @@
                         <div class="dot">
                             <p>05</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">contact section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">contact section으로 바로가는버튼</span></div>
                         </div>
                         <div class="row-line"></div>
                     </li>
@@ -424,14 +426,15 @@
                         <div class="dot">
                             <p>06</p>
                             <div class="column-line"></div>
-                            <button><span class="blind">footer section으로 바로가는버튼</span></button>
+                            <div class="dot-item"><span class="blind">footer section으로 바로가는버튼</span></div>
                         </div>
                         <div class="row-line"></div>
                     </li>
                 </ul>
             </div>
         </main>
-        <footer id="footer">
+        <footer class="footer">
+                <p class="copyright">©2020 Kimyeonhee All rights reserved</p>
         </footer>
      </div>
 </body>
