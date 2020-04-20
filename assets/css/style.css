@@ -200,7 +200,7 @@ p.caution {font-size: 14px;}
   .work-copy > li a {line-height:100%; padding-top:3vw;}
   .contact-button {font-size: 14vw; margin-top: 2vh;}
   .rect-left {padding-bottom:0;}
-  .rect-left .rect-copy .rect-headline {font-size: 18vw;}
+  .rect-left .rect-copy .rect-headline {font-size: 13vw;}
   .contact-headline {font-size: 14vw;}
   .about-display {width: 319px; height: 417px; padding: 20px;}
   .contact-items:nth-child(n+2) {margin-top: 2vh;}

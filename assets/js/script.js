@@ -52,12 +52,36 @@ $(function (e) {
 
     });
 
-    //webfont load가 script load보다 늦어서 setTimeout 300을 줌.
+        //Height 값구하기 
+    let headerH = $(".main-gnb").outerHeight();
+    let pagingH = $(".paging").outerHeight();
+    let currentH = $(".current").find("li").outerHeight();
+
     setTimeout(function () {
-        let headerH = $(".main-gnb").outerHeight();
-        $(".section-hero .sticky-wrapper").css("top", -headerH);
-        console.log(headerH);
+        $(".section-hero .sticky-wrapper").css("top", -headerH); // webfont load가 script load보다 늦어서 setTimeout 300을 줌.
+        $(".paging").css("height",pagingH);
+        console.log(currentH);
     }, 300);
+
+//ability
+let idx = 1;
+let current = 0;
+let item =  $(".ability-content").find("li");
+let items = item.length;
+console.log(items);
+
+$(".next").click(function(){
+item.eq(idx).css({"margin-left":"110%"}).animate({"margin-left":0},300);
+item.eq(idx-1).animate({"margin-left":"-110%"},300);
+$(".current").animate({"margin-top": -(currentH*idx)},300);
+idx ++;
+if(idx == items){
+    idx = 0;
+}
+console.log(currentH);
+});
+
+
 
     //nav
     let menu =  $(".navlist").find("li");
@@ -79,26 +103,6 @@ $(function (e) {
         $(".carousel").find("a").addClass("opacity");
         $(".carousel").find("p, .column-line, .row-line").addClass("transform");
     });
-
-//ability
-
-let idx = 1;
-let item =  $(".ability-content").find("li");
-let items = item.length;
-console.log(items);
-
-$(".next").click(function(){
-item.eq(idx).css({"margin-left":"110%"}).animate({"margin-left":0},300);
-item.eq(idx-1).animate({"margin-left":"-110%"},300);
-idx ++;
-
-if(idx == items){
-    idx = 0;
-}
-console.log(idx);
-
-});
-
 
 
     //contact
