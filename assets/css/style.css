@@ -50,7 +50,7 @@
 .fill-screen {position:absolute; top:0; left:0; width:100%; height:100%; background-size:auto 100.2%; background-position:left center; overflow:hidden;}
 .screm {z-index:3; background: rgba(0,0,0,1); opacity:.35;}
 .section-about.active .screm {opacity:0;}
-.fill-screen-bg {position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg.gif);}
+.fill-screen-bg {position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5a145e95083499.5e9d949f61abd.gif);}
 /* .section-work-triptych */
 .section-work-triptych .sticky {max-height: 780px; height: calc( 100vh - var(--localnav-height)); z-index: 2; padding: var(--frame-thickness) 0;}
 .triptych-content {display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; position: relative; width: 100%; height: 100%;} 
