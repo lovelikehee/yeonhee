@@ -202,7 +202,7 @@ p.caution {font-size: 14px;}
   .rect-left {padding-bottom:0;}
   .rect-left .rect-copy .rect-headline {font-size: 13vw;}
   .contact-headline {font-size: 14vw;}
-  .about-display {width: 319px; height: 417px; padding: 20px;}
+  .about-display {width: 319px; height: 417px; padding: 10px;}
   .contact-items:nth-child(n+2) {margin-top: 2vh;}
   .carousel-wrap li.active .row-line {width:8vw;}
   .carousel-wrap li .row-line::after {width:8vw;}
