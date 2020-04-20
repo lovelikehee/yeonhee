@@ -17,29 +17,31 @@ $(function (e) {
         $(".Scroll").text(ScrollH);
 
 
+
         //offset 
-        let offset = (Scroll / contH) * 0.03;
+        let offset = (Scroll / contH) * 2;
         let offset1 = (Scroll - $(".column-right").offset().top) * 0.07;
-        let offset2 = (Scroll - $(".triptych-column").offset().top) / 1000;
+        let offset2 = (Scroll - $(".triptych-column").offset().top) /5;
         let offset3 = (Scroll - $(".section-about").offset().top) * 0.18;
         let offset4 = (Scroll - $(".ability-content").offset().top) * 0.05;
         console.log(offset);
 
         //.about
-        $(".about-display").css({"transform": "scale(" + -offset2 + ") translateY(" + offset3 + "px)"});
-        $(".screm").css({"opacity": "offset"});
+        $(".about-display").css({"transform": "scale(" +50/offset+ ") translateY(" + offset3*1.3+ "px) translateZ(" + 50/offset+ "px)"});
+        $(".screm").css({"opacity": .25/offset});
+
         //.triptych-column Scroll
-        $(".triptych-column .triptych-image-container  figure").css({"transform": "translateY(" + -offset + "px)"});
+        $(".triptych-column .triptych-image-container  figure").css({"transform": "translateY(" + offset2 + "px)"});
         $(".gallery-img-all").css({"transform": "translateY(" + -(offset1 - 60) + "px)"});
         $(".work-typography").css({"transform": "translateY(" + -(offset1 - 50) + "px)"});
         //.section-ability
         $(".rect-left").css({"transform": "translateY(" + offset4 + "px)"});
         $(".rect-right").css({ "transform": "translateY(" + -offset4 + "px)"});
 
-        if(Scroll = section.eq(0).offset().top){
-            $(".section-hero").addClass("active");
+        if($(document).ready){
+            $(".hero-headline").animate({"opacity":1 , "margin-top":"1.6vh"},500);
         }else{
-            $(".section-hero").removeClass("active");
+            $(".hero-headline").animate({"opacity":0 , "margin-top":"-5.6vh"});
         }
         if(Scroll >= section.eq(1).offset().top*2.5){
             $(".section-about").addClass("active");
