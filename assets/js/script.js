@@ -60,7 +60,7 @@ $(function (e) {
     setTimeout(function () {
         $(".section-hero .sticky-wrapper").css("top", -headerH); // webfont load가 script load보다 늦어서 setTimeout 300을 줌.
         $(".paging").css("height",pagingH);
-        $(".current-area").css("height",currentH);
+        $(".current-area").css("height",currentH+2);
         console.log(currentH);
     }, 300);
 
