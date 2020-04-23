@@ -5,6 +5,7 @@
 .inner {display:flex; align-items:center; justify-content:center; width:100%; height:100%; padding:0 6.25vw;}
 .row {display: flex; flex-flow:wrap row;  justify-content:center; width:100%;}
 .main {position:relative; display:block;}
+.will-change { will-change: transform, opacity;}
 .section {position:relative; z-index:2; background-color:var(--dark);}
 .sticky-wrapper {position:relative; z-index:1;}
 .sticky {-webkit-position:sticky; position:sticky; top:0; width:100%; height:100vh; z-index: 2;}
@@ -30,15 +31,22 @@
 .section-hero .sticky-wrapper {top:0; height:150vh;}
 .section-hero .sticky {min-height:920px;}
 .hero-content {position:relative; justify-content:center; align-items:center; width:100%; height:100vh; z-index:1; padding:0 16.67vw;}
-.hero-eyebrow {font-size: .88em; font-weight: 800;}
+.hero-eyebrow {font-size: .88em; font-weight: 800; opacity:0; transform:matrix(1,0,0,1,-50,0); transition: opacity 0.25s  cubic-bezier(.25,.25,.75,.75), transform 0.25s  cubic-bezier(0,0,.25,1);}
 .hero-text {flex:0 0 50%; max-width:50%; z-index:2; padding-left:8vw;}
-.hero-headline {opacity:0; font-weight:700; line-height: 1; font-size: 7.29vw; text-align: left; margin-top: 5.6vh; }
+.hero-headline {font-weight:700; line-height: 1; font-size: 7.29vw; text-align: left; margin-top: 2.6vh; }
+.hero-headline  span {display:flex; opacity:0; transform:matrix(1,0,0,1,-50,0); }
+.hero-headline  span:nth-of-type(1) {transition: opacity 0.5s cubic-bezier(.25,.25,.75,.75), transform 0.5s cubic-bezier(0,0,.25,1);}
+.hero-headline  span:nth-of-type(2) { transition: opacity 0.5s .45s cubic-bezier(.25,.25,.75,.75), transform 0.5s .45s cubic-bezier(0,0,.25,1);}
 .hero-circle {position:relative; flex: 0 0 50%; height:100%;}
 .hero-circle-shape {position:absolute; top:15%; right:15%; width:600px; height:600px; border:1px solid var(--gray);border-radius:50vh; padding: 80px;}
 .shape-mask {width:100%; height:100%;  background-image:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/6f764295083499.5e943a07c2f47.gif); background-repeat:no-repeat; background-size:contain; animation: borderRadius 15s ease-in-out infinite both alternate;}
 .hero-manifesto {position: relative; align-self:flex-start; z-index:2;  padding:100px 0 200px 0;  margin-top: -50vh;background:-webkit-linear-gradient(rgba(0,0,0,0) , rgba(30,30,30,1),rgba(30,30,30,1)); background:linear-gradient(rgba(0,0,0,0) , rgba(30,30,30,1),rgba(30,30,30,1));}
 .typography-hero-subhead {font-size: 7.5em; font-weight: 700; line-height:100%; letter-spacing: -.05em; text-align: center;}
 .hero-copy {font-size: 42px; letter-spacing: 0.01em; text-align:center; line-height:1.6; white-space:pre-line; padding:45px 3vh 50px;}
+
+
+.section-hero.active .hero-eyebrow  {opacity:1; transform:matrix(1,0,0,1,0,0);}
+.section-hero.active .hero-headline  span {opacity:1; transform:matrix(1,0,0,1,0,0);}
 
 /*.section-about*/
 .section-about {margin-top:-100vh; z-index:2;}
@@ -50,7 +58,8 @@
 .fill-screen {position:absolute; top:0; left:0; width:100%; height:100%; background-size:auto 100.2%; background-position:left center; overflow:hidden;}
 .screm {z-index:3; background: rgba(0,0,0,1); opacity:.35;}
 .section-about.active .screm {opacity:0;}
-.fill-screen-bg {position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5a145e95083499.5e9d949f61abd.gif);}
+.fill-screen-bg {position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg.jpg);}
+.fill-screen-bg2 {z-index:-1; position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg2.jpg);}
 /* .section-work-triptych */
 .section-work-triptych .sticky {max-height: 780px; height: calc( 100vh - var(--localnav-height)); z-index: 2; padding: var(--frame-thickness) 0;}
 .triptych-content {display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; position: relative; width: 100%; height: 100%;} 

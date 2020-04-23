@@ -7,7 +7,7 @@ $(function (e) {
     let contItems = $(".contact-items").find("input");
     let section = $(".main").find("section");
 
-    
+
 
     //scrollTop value
     $(window).scroll(function () {
@@ -16,20 +16,24 @@ $(function (e) {
         let contH = $(".section").offset().top;
         $(".Scroll").text(ScrollH);
 
-
-
+    
         //offset 
         let offset = (Scroll / contH) * 2;
         let offset1 = (Scroll - $(".column-right").offset().top) * 0.07;
         let offset2 = (Scroll - $(".triptych-column").offset().top) /5;
         let offset3 = (Scroll - $(".section-about").offset().top) * 0.18;
         let offset4 = (Scroll - $(".ability-content").offset().top) * 0.05;
-        console.log(offset);
+        let offset5 = (Scroll - $(".hero-manifesto").offset().top)*0.23;
 
+        //.hero
+        $(".typography-hero-subhead").css({"opacity":offset/10.5, "transform": "matrix(1, 0, 0, 1, 0,"+offset+")"});
+        $(".hero-copy").css({"opacity":offset/11, "transform": "matrix(1, 0, 0, 1, 0,"+offset+")"});
+        $(".fill-screen-bg").css({"transform": "matrix( 1, 0, 0, 1 ,0," +-offset5*.8+ ")"});
         //.about
-        $(".about-display").css({"transform": "scale(" +50/offset+ ") translateY(" + offset3*1.3+ "px) translateZ(" + 50/offset+ "px)"});
+        // $(".about-display").css({"transform": "scale(" +50/offset+ ") translateY(" + offset3*1.3+ "px) translateZ(" + 50/offset+ "px)"});
+        $(".about-display").css({"transform": "matrix(" +60/offset+ ", 0, 0, "+60/offset+" ,0," +-offset4*1.4+ ")"});
         $(".screm").css({"opacity": .25/offset});
-
+    
         //.triptych-column Scroll
         $(".triptych-column .triptych-image-container  figure").css({"transform": "translateY(" + offset2 + "px)"});
         $(".gallery-img-all").css({"transform": "translateY(" + -(offset1 - 60) + "px)"});
@@ -37,18 +41,39 @@ $(function (e) {
         //.section-ability
         $(".rect-left").css({"transform": "translateY(" + offset4 + "px)"});
         $(".rect-right").css({ "transform": "translateY(" + -offset4 + "px)"});
-
-        if($(document).ready){
-            $(".hero-headline").animate({"opacity":1 , "margin-top":"1.6vh"},500);
+        
+        if(Scroll >= section.eq(0).offset().top){
+            $(".carousel-wrap > li").eq(0).addClass("active");
         }else{
-            $(".hero-headline").animate({"opacity":0 , "margin-top":"-5.6vh"});
+            $(".carousel-wrap > li").eq(0).removeClass("active");
         }
-        if(Scroll >= section.eq(1).offset().top*2.5){
+        if(Scroll >= section.eq(1).offset().top){
             $(".section-about").addClass("active");
+            $(".carousel-wrap> li").eq(1).addClass("active");
         }else{
             $(".section-about").removeClass("active");
+            $(".carousel-wrap> li").eq(1).removeClass("active");
         }
-        console.log(section.eq(2).offset().top);
+        if(Scroll >= section.eq(2).offset().top/1.2){
+            $(".carousel-wrap >li").eq(2).addClass("active");
+        }else{
+            $(".carousel-wrap >li").eq(2).removeClass("active");
+        }
+        if(Scroll >= section.eq(3).offset().top){
+            $(".carousel-wrap >li").eq(3).addClass("active");
+        }else{
+            $(".carousel-wrap >li").eq(3).removeClass("active");
+        }
+        if(Scroll >= section.eq(4).offset().top){
+            $(".carousel-wrap >li").eq(4).addClass("active");
+        }else{
+            $(".carousel-wrap >li").eq(4).removeClass("active");
+        }
+        if(Scroll >= section.eq(5).offset().top){
+            $(".carousel-wrap >li").eq(5).addClass("active");
+        }else{
+            $(".carousel-wrap >li").eq(5).removeClass("active");
+        }
 
     });
 
@@ -57,10 +82,11 @@ $(function (e) {
     let pagingH = $(".paging").outerHeight();
     let currentH = $(".current").find("li").outerHeight();
 
-    setTimeout(function () {
+    setTimeout(function(){
         $(".section-hero .sticky-wrapper").css("top", -headerH); // webfont load가 script load보다 늦어서 setTimeout 300을 줌.
         $(".paging").css("height",pagingH);
         $(".current-area").css("height",currentH);
+        $(".section-hero").addClass("active");
         console.log(currentH);
     }, 300);
 
@@ -81,7 +107,6 @@ if(idx == items){
 }
 console.log(currentH);
 });
-
 
 
     //nav
