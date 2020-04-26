@@ -31,7 +31,7 @@ $(function (e) {
         $(".hero-copy").css({"opacity":offset/11, "transform": "matrix(1, 0, 0, 1, 0,"+offset+")"});
         //.about
         // $(".about-display").css({"transform": "scale(" +50/offset+ ") translateY(" + offset3*1.3+ "px) translateZ(" + 50/offset+ "px)"});
-        $(".about-display").css({"transform": "matrix(" +74/offset+ ", 0, 0, "+74/offset+" ,0," +-offset4*2.1+ ")"});
+        $(".about-display").css({"transform": "matrix(" +70/offset+ ", 0, 0, "+70/offset+" ,0," +-offset4*1.6+ ")"});
         $(".screm").css({"opacity": -offset4/480});
         $(".fill-screen-bg").css({"transform": "matrix( 1, 0, 0, 1 ,0," +-offset5*1.1+ ")"});
     
