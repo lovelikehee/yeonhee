@@ -19,7 +19,7 @@
 /* header.main-gnb*/
 .main-gnb {-webkit-position:sticky; position:sticky; top:0; left:0; width:100%; height:100%; padding-top:3.48vh; background-color: rgba(30,30,30,0.5);background-color: rgba(30,30,30,0.5); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); transition: background-color 0.5s cubic-bezier(0.280.11, 0.32, 1); z-index: 9997;}
 .header-wrap {position:relative;}
-.header-logo  {align-self: flex-end;}
+.header-logo  {align-self: center;}
 .header-logo a {width:2.97vh; height:auto;}
 .header-wrap  nav {flex:1;}
 .header-wrap  nav  ul {display:flex;}
