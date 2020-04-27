@@ -24,7 +24,7 @@
 .header-wrap  nav {flex:1;}
 .header-wrap  nav  ul {display:flex;}
 .header-wrap  nav  ul li {font-weight:400; font-size: .88em; margin-left:3.65vw; padding: 1.85vh 1.04vw;}
-.navlist li.active a{color:var(--primary-color);}
+.navlist li.show a{color:var(--primary-color);}
 /*.section-hero */
 .section-hero {z-index:3;}
 .section-hero .sticky-wrapper {top:0; height:150vh;}
