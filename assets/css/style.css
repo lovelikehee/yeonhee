@@ -111,7 +111,7 @@
 .contact-content {display:flex; flex-direction:row; justify-content: space-evenly; width:100%;}
 .myself {flex:0 0 50%;}
 .myself-circle-shape {width:600px; height:600px; border:1px solid var(--gray); border-radius: 50vh; padding: 80px;}
-.myself-mask {width:100%; height:100%;  background-image:url(../images/me.gif); background-repeat:no-repeat; background-size:contain; animation: borderRadius 15s ease-in-out infinite both alternate;}
+.myself-mask {width:100%; height:100%;  background-image:url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/96c1c895083499.5ea69989290f9.gif); background-repeat:no-repeat; background-size:contain; animation: borderRadius 15s ease-in-out infinite both alternate;}
 .contact {flex:0 0 50%; padding: 0 4vw;}
 .contact  input , textarea{background:transparent; border:none;}
 .contact-input {overflow:hidden; width:100%;}
