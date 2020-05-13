@@ -56,13 +56,21 @@
 .section-about.active .screm {opacity:0;}
 .fill-screen-bg {position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg.jpg);}
 .fill-screen-bg2 {z-index:-1; position: absolute; top: 0; left: 0; width:100%; height:100%; background-size: auto 100.2%; background-position:left center; background-size: auto 100.2%; background-position: left center; background-repeat: no-repeat; background-image: url(../images/display-bg2.jpg);}
-.about-play {display:flex; width:100%; height:100%;}
+.about-link {position:relative;}
+.about-link::after {content:""; display:block; position:absolute; bottom:0; left:.1em; width:0; height:.08em; background-color: #fff; transition:width .3s ease-in;}
+.about-link:hover::after { width:100%;}
+.point-text {transition:color .3s ease;}
+.about-link:hover .point-text {color: var( --primary-color); }
+.about-explain {text-align:center;}
+.about-explain p{font-size:20px; padding-top: .2em; font-weight: 400;}
 /* .section-work-triptych */
 .section-work-triptych .sticky {max-height: 780px; height: calc( 100vh - var(--localnav-height)); z-index: 2; padding: var(--frame-thickness) 0;}
 .triptych-content {display:flex; justify-content: space-between; align-content:space-between; flex-wrap:wrap; position: relative; width: 100%; height: 100%;} 
-.triptych-column {position: relative; width: calc(33.33% - var(--frame-thickness) * 2/3); height:100%; background:#000;}
+.triptych-column {position:relative; width: calc(33.33% - var(--frame-thickness) * 2/3); height:100%; background:#000;}
 .triptych-column a {width:100%; height:100%;}
-.triptych-image-container {position: relative; width: 100%; height: 100%; overflow: hidden;}
+.triptych-column-text {display:flex; justify-content: center; align-items: center; width:100%; height:100%; text-align: center; position:absolute;padding: 80px; font-size: 16px; line-height: 1.6; opacity:1;}
+.triptych-image-container {position: relative; width: 100%; height: 100%; overflow: hidden; transition:opacity .3s ease-in;}
+.triptych-image-container:hover {opacity:.2;}
 .container-left {padding: 60px 0 0 60px;}
 .container-right {display: flex; align-items: center; justify-content:center; width:100%; padding:60px;}
 .image-triptych-left {--image-y-parallax: 120px; width:100%; height: calc( 100% + var(--image-y-parallax)); background-repeat: no-repeat; background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/68c76595083499.5e8ef0ddcb82b.png);background-size: 100% auto; background-size: 100% auto; background-position: top left;}
@@ -76,10 +84,12 @@
 .work-headline {font-size:50px; font-weight:600;}
 .work-copy {font-size:30px; font-weight:300; padding:20px 0 0 0;}
 .work-copy > li {opacity:0.5;  padding-top:5px;}
-.work-copy > li:hover a {opacity:1;}
+.work-copy > li:hover {opacity:1;}
 .work-gallery { --caption-frame-height: 50; position:relative; width: 100%; height:100%; background:#000; transition: transform 1s, -webkit-transform 1s;}
+.work-gallery .triptych-column-text {padding:80px 80px 200px;}
 .gallery-link {width:100%;height:100%;}
-.gallery-content {position:relative; width:100%; height: calc( 100% - var(--caption-frame-height) * 1px); z-index: 0; overflow:hidden;}
+.gallery-content {position:relative; width:100%; height: calc( 100% - var(--caption-frame-height) * 1px); z-index: 0; overflow:hidden; transition:opacity .3s ease;}
+.gallery-content:hover {opacity:.3;}
 .gallery-img {position:relative; width:100%; height:100%; background-color: #000; z-index:100;padding:20px;}
 .gallery-img-all {width:100%; height:100%; background:url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/7bf9c995083499.5e9cace47c0eb.png) no-repeat; background-size: contain; background-position: 50% 50%;}
 /*.section-ability */
@@ -188,6 +198,9 @@ p.caution {font-size: 14px;}
     .contact-items:nth-child(n+2) {margin-top:4vh;}
     .contact-button {margin-top:5vh; font-size: 6.8vw;}
     .label-text.active {-webkit-transform: scale(.4) translateY(-5%);transform: scale(.4) translateY(-5%);}
+    .about-explain p {font-size: 12px;}
+    .triptych-column-text {font-size:10px; padding:24px;}
+    .work-gallery .triptych-column-text {padding:0;}
   }
 
 @media only screen and (max-width: 568px){
